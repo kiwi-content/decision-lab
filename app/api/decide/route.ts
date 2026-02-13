@@ -78,6 +78,7 @@ ${story}
     );
 
     const data = await response.json();
+    console.log("Gemini response:", JSON.stringify(data, null, 2));
 
     const result =
       data?.candidates?.[0]?.content?.parts?.[0]?.text;

@@ -15,11 +15,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Decision Lab | Life Decision Simulators",
   description:
-    "Run your decision before you live it. Free decision simulators for relationships, career, moving, and decluttering.",
-  verification: {
-    google: "qRhK_TW2QITIO35Vcuf1N_jHEcgQBd9cGtk42YXvdNo",
-  },
+    "Run your decision before you live it. Free decision simulators for relationships, career, moving, and decluttering."
 };
+
+<meta name="google-site-verification" content="qRhK_TW2QITIO35Vcuf1N_jHEcgQBd9cGtk42YXvdNo" />
 
 export default function RootLayout({
   children,

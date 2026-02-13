@@ -18,8 +18,6 @@ export const metadata: Metadata = {
     "Run your decision before you live it. Free decision simulators for relationships, career, moving, and decluttering."
 };
 
-<meta name="google-site-verification" content="qRhK_TW2QITIO35Vcuf1N_jHEcgQBd9cGtk42YXvdNo" />
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,6 +25,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="qRhK_TW2QITIO35Vcuf1N_jHEcgQBd9cGtk42YXvdNo"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

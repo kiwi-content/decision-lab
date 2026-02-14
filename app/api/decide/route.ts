@@ -6,10 +6,9 @@ export async function POST(req: Request) {
 
     let systemPrompt = "";
 
-    // Tool-based prompt switching
     if (tool === "text-my-ex") {
       systemPrompt = `
-You are a decision simulator.
+You are a relationship decision simulator.
 
 Evaluate whether someone should text their ex.
 
@@ -28,6 +27,73 @@ Line 1: Exactly one of:
 
 Line 2: One short explanation.
 `;
+
+    } else if (tool === "quit-my-job") {
+      systemPrompt = `
+You are a career decision simulator.
+
+Evaluate whether the user should quit their job.
+
+Consider:
+- Financial stability
+- Career growth
+- Emotional stress
+- Long-term impact
+
+Return ONLY:
+
+Line 1: Exactly one of:
+"Stay."
+"Prepare before quitting."
+"Quit."
+
+Line 2: One short explanation.
+`;
+
+    } else if (tool === "break-up") {
+      systemPrompt = `
+You are a relationship decision simulator.
+
+Evaluate whether the user should break up.
+
+Consider:
+- Emotional health
+- Compatibility
+- Repeated conflict
+- Long-term well-being
+
+Return ONLY:
+
+Line 1: Exactly one of:
+"Stay."
+"Have a serious conversation first."
+"Break up."
+
+Line 2: One short explanation.
+`;
+
+    } else if (tool === "move") {
+      systemPrompt = `
+You are a relocation decision simulator.
+
+Evaluate whether the user should move.
+
+Consider:
+- Career opportunity
+- Financial cost
+- Lifestyle change
+- Social impact
+
+Return ONLY:
+
+Line 1: Exactly one of:
+"Stay."
+"Plan carefully."
+"Move."
+
+Line 2: One short explanation.
+`;
+
     } else {
       // Default: throw-away tool
       systemPrompt = `
@@ -68,7 +134,7 @@ Line 2: One short explanation.
 
 Situation:
 ${story}
-                  `,
+`,
                 },
               ],
             },
@@ -80,8 +146,14 @@ ${story}
     const data = await response.json();
     console.log("Gemini response:", JSON.stringify(data, null, 2));
 
-    const result =
-      data?.candidates?.[0]?.content?.parts?.[0]?.text;
+    let result = "";
+
+    if (data?.candidates && data.candidates.length > 0) {
+      const parts = data.candidates[0]?.content?.parts;
+      if (parts && parts.length > 0) {
+        result = parts.map((p: any) => p.text).join("\n");
+      }
+    }
 
     if (!result) {
       return NextResponse.json({

@@ -30,6 +30,12 @@ export default function Tool() {
     setLoading(false);
   };
 
+  const handleReset = () => {
+    setObject("");
+    setStory("");
+    setResult("");
+  };
+
   const lines = result ? result.split("\n").filter((l) => l.trim() !== "") : [];
   const decision = lines[0] ?? "";
   const reason = lines[1] ?? "";
@@ -38,6 +44,17 @@ export default function Tool() {
 
   return (
     <div className="mx-auto mb-12 max-w-3xl fade-in-up">
+      <div className="sticky top-0 z-10 flex items-center justify-between bg-[#fffff5]/90 backdrop-blur-sm border-b border-[#80caff]/30 -mx-4 px-4 py-3 mb-8">
+        <Link href="/" className="text-xs font-bold uppercase tracking-[0.2em] text-[#5d92d8] hover:text-[#1d2440] transition-colors">
+          ← Decision Lab
+        </Link>
+        <button
+          onClick={handleReset}
+          className="rounded-full border border-[#80caff] bg-white px-4 py-2 text-xs font-semibold text-[#5d92d8] hover:bg-[#f3f9ff] transition-colors"
+        >
+          Try Again
+        </button>
+      </div>
       <div className="mb-6 text-center">
         <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-black/50">Declutter Lab</p>
         <h1 className="display-font text-4xl font-extrabold uppercase leading-tight text-[#1a1627] sm:text-5xl">

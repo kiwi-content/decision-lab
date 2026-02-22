@@ -29,6 +29,11 @@ export default function QuitMyJob() {
     setLoading(false);
   };
 
+  const handleReset = () => {
+    setSituation("");
+    setResult("");
+  };
+
   const lines = result ? result.split("\n").filter((l) => l.trim() !== "") : [];
   const decision = lines[0] ?? "";
   const reason = lines[1] ?? "";
@@ -38,6 +43,17 @@ export default function QuitMyJob() {
   return (
     <main className="stage-bg min-h-screen px-4 py-6 sm:px-10 sm:py-10">
       <section className="panel-shell mx-auto max-w-6xl px-6 py-8 sm:px-10 sm:py-10">
+        <div className="sticky top-0 z-10 flex items-center justify-between bg-[#fffff5]/90 backdrop-blur-sm border-b border-[#80caff]/30 -mx-6 sm:-mx-10 px-6 sm:px-10 py-3 mb-8">
+          <Link href="/" className="text-xs font-bold uppercase tracking-[0.2em] text-[#5d92d8] hover:text-[#1d2440] transition-colors">
+            ← Decision Lab
+          </Link>
+          <button
+            onClick={handleReset}
+            className="rounded-full border border-[#80caff] bg-white px-4 py-2 text-xs font-semibold text-[#5d92d8] hover:bg-[#f3f9ff] transition-colors"
+          >
+            Try Again
+          </button>
+        </div>
       <div className="mx-auto mb-12 max-w-3xl text-center fade-in-up">
         <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-black/50">Career Lab</p>
         <h1 className="display-font mb-4 text-4xl font-extrabold uppercase text-[#1a1627] sm:text-5xl">Should I Quit My Job?</h1>

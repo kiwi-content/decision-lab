@@ -13,33 +13,58 @@ export default function MethodologyPage() {
         <h1 className="display-font mb-6 text-4xl font-bold uppercase text-[#1d2440]">Decision Methodology</h1>
 
         <p className="mb-6 text-[#4f5e7c]">
-          Every simulator uses the same framework so results stay consistent across different
-          life decisions. The goal is clarity through structured comparison, not emotional persuasion.
+          Decision Lab uses a standardized decision framework so recommendations remain coherent
+          across different life domains. Our objective is not to generate motivational language,
+          but to deliver practical clarity under uncertainty.
         </p>
 
-        <h2 className="mb-3 text-2xl font-semibold text-[#1d2440]">Core Lens</h2>
+        <h2 className="mb-3 text-2xl font-semibold text-[#1d2440]">Core Evaluation Dimensions</h2>
         <ul className="mb-8 list-disc space-y-2 pl-6 text-[#4f5e7c]">
-          <li>What are the likely outcomes in 1 week, 3 months, and 1 year?</li>
-          <li>Which option creates irreversible downside?</li>
-          <li>Which risks are acceptable and which are not?</li>
-          <li>Which choice aligns with your stated values and constraints?</li>
+          <li>Outcome horizon: likely effects in the near, medium, and long term</li>
+          <li>Reversibility: whether a poor decision can be corrected at low cost</li>
+          <li>Risk concentration: probability and severity of downside events</li>
+          <li>Value alignment: consistency with user priorities and constraints</li>
+          <li>Execution feasibility: practical ability to follow through</li>
         </ul>
 
-        <h2 className="mb-3 text-2xl font-semibold text-[#1d2440]">Decision Process</h2>
+        <h2 className="mb-3 text-2xl font-semibold text-[#1d2440]">How Inputs Are Interpreted</h2>
+        <p className="mb-4 text-[#4f5e7c]">
+          User input is translated into decision signals rather than treated as narrative alone.
+          Signals can include urgency, emotional load, resource constraints, time sensitivity,
+          stability of alternatives, and expected reversibility.
+        </p>
+        <p className="mb-8 text-[#4f5e7c]">
+          The simulation then compares options against these signals, with emphasis on downside
+          control and decision timing. This process reduces overreliance on a single emotional
+          moment or one attractive short-term benefit.
+        </p>
+
+        <h2 className="mb-3 text-2xl font-semibold text-[#1d2440]">Recommendation Logic</h2>
         <ul className="mb-8 list-disc space-y-2 pl-6 text-[#4f5e7c]">
-          <li>Parse your context into concrete decision variables</li>
-          <li>Compare upside and downside for each option</li>
-          <li>Assess timing, reversibility, and regret risk</li>
-          <li>Return a concise recommendation with rationale</li>
+          <li>Identify the option with strongest risk-adjusted fit</li>
+          <li>Penalize decisions with high irreversible downside</li>
+          <li>Prefer delay when uncertainty is high and cost of waiting is low</li>
+          <li>Prefer action when inaction creates compounding risk</li>
+          <li>Return concise guidance plus rationale for user review</li>
         </ul>
 
-        <h2 className="mb-3 text-2xl font-semibold text-[#1d2440]">What We Prioritize</h2>
-        <ul className="mb-8 list-disc space-y-2 pl-6 text-[#4f5e7c]">
-          <li>Reducing avoidable harm</li>
-          <li>Improving long-term fit over short-term relief</li>
-          <li>Making trade-offs visible before action</li>
-          <li>Supporting clear, accountable decisions</li>
-        </ul>
+        <h2 className="mb-3 text-2xl font-semibold text-[#1d2440]">Quality Standards</h2>
+        <p className="mb-4 text-[#4f5e7c]">
+          We optimize for clarity, consistency, and utility. Outputs are intentionally short so users
+          can make decisions quickly, but each result is designed to reflect explicit trade-offs, not
+          generic encouragement.
+        </p>
+        <p className="mb-8 text-[#4f5e7c]">
+          We also treat uncertainty honestly. When signal quality is weak or outcomes are highly
+          ambiguous, the system can indicate caution or delay instead of forcing false precision.
+        </p>
+
+        <h2 className="mb-3 text-2xl font-semibold text-[#1d2440]">Important Limitation</h2>
+        <p className="mb-8 text-[#4f5e7c]">
+          Decision Lab is an informational decision-support tool and does not replace licensed
+          professional judgment. Users should seek qualified advice for legal, clinical, or investment
+          decisions where domain regulation and fiduciary duty apply.
+        </p>
 
         <p className="text-[#4f5e7c]">
           For product purpose and scope, see{" "}

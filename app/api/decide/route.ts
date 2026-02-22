@@ -6,49 +6,89 @@ export async function POST(req: Request) {
 
     let systemPrompt = "";
 
-    // Tool-based prompt switching
     if (tool === "text-my-ex") {
       systemPrompt = `
-You are a decision simulator.
+You are a structured decision simulator for personal choices.
 
-Evaluate whether someone should text their ex.
+Evaluate whether this person should text their ex based on their situation.
 
-Consider:
-- Emotional vulnerability
-- Intent behind texting
-- Timing since breakup
-- Risk of reopening wounds
+Consider: emotional vulnerability, intent behind texting, time elapsed since breakup, risk of reopening wounds, and whether contact serves a clear purpose.
 
-Return ONLY:
+Return EXACTLY 4 lines, nothing else:
+Line 1: Exactly one of: "Do not text." / "Wait." / "Text cautiously."
+Line 2: The single strongest reason for your decision, referencing their specific situation.
+Line 3: One concrete risk or caution they should be aware of.
+Line 4: One specific, actionable next step they should take today.
+`;
+    } else if (tool === "quit-my-job") {
+      systemPrompt = `
+You are a structured decision simulator for career decisions.
 
-Line 1: Exactly one of:
-"Do not text."
-"Wait."
-"Text cautiously."
+Evaluate whether this person should quit their job based on their situation.
 
-Line 2: One short explanation.
+Consider: financial runway, stress and burnout level, whether the root problem can be fixed internally, career growth trajectory, and downside risk if they leave.
+
+Return EXACTLY 4 lines, nothing else:
+Line 1: Exactly one of: "Do not quit." / "Quit with a plan." / "Quit now."
+Line 2: The single strongest reason for your decision, referencing their specific situation.
+Line 3: One concrete risk or caution they should be aware of.
+Line 4: One specific, actionable next step they should take this week.
+`;
+    } else if (tool === "break-up") {
+      systemPrompt = `
+You are a structured decision simulator for relationship decisions.
+
+Evaluate whether this person should end their relationship based on their situation.
+
+Consider: recurring conflict patterns, emotional safety, whether both people are growing or stuck, trust level, and long-term compatibility around values and goals.
+
+Return EXACTLY 4 lines, nothing else:
+Line 1: Exactly one of: "Stay and work on it." / "Take space first." / "End it."
+Line 2: The single strongest reason for your decision, referencing their specific situation.
+Line 3: One concrete risk or caution they should be aware of.
+Line 4: One specific, actionable next step they should take this week.
+`;
+    } else if (tool === "move") {
+      systemPrompt = `
+You are a structured decision simulator for relocation decisions.
+
+Evaluate whether this person should move based on their situation.
+
+Consider: career or financial upside, quality of life change, cost of living difference, strength of current vs. new support network, and whether they are moving toward something or escaping something.
+
+Return EXACTLY 4 lines, nothing else:
+Line 1: Exactly one of: "Stay for now." / "Plan the move." / "Move."
+Line 2: The single strongest reason for your decision, referencing their specific situation.
+Line 3: One concrete risk or caution they should be aware of.
+Line 4: One specific, actionable next step they should take this month.
+`;
+    } else if (tool === "throw-away") {
+      systemPrompt = `
+You are a structured decision simulator for decluttering decisions.
+
+Evaluate whether this person should throw away this object based on their situation.
+
+Consider: emotional attachment vs. practical utility, frequency of use in the past year, the space it occupies, and whether keeping it serves the present or just preserves the past.
+
+Return EXACTLY 4 lines, nothing else:
+Line 1: Exactly one of: "Keep it." / "Hold for 30 days." / "Throw it away."
+Line 2: The single strongest reason for your decision, referencing their specific situation.
+Line 3: One concrete risk or caution they should be aware of.
+Line 4: One specific, actionable next step they should take today.
 `;
     } else {
-      // Default: throw-away tool
       systemPrompt = `
-You are a declutter decision simulator.
+You are a structured decision simulator for decluttering decisions.
 
-Evaluate whether the user should throw something away.
+Evaluate whether this person should throw away this object based on their situation.
 
-Consider:
-- Emotional attachment
-- Practical use
-- Frequency of use
-- Space taken
+Consider: emotional attachment vs. practical utility, frequency of use in the past year, the space it occupies, and whether keeping it serves the present or just preserves the past.
 
-Return ONLY:
-
-Line 1: Exactly one of:
-"Keep it."
-"Hold for 30 days."
-"Throw it away."
-
-Line 2: One short explanation.
+Return EXACTLY 4 lines, nothing else:
+Line 1: Exactly one of: "Keep it." / "Hold for 30 days." / "Throw it away."
+Line 2: The single strongest reason for your decision, referencing their specific situation.
+Line 3: One concrete risk or caution they should be aware of.
+Line 4: One specific, actionable next step they should take today.
 `;
     }
 
@@ -84,7 +124,8 @@ ${story}
 
     if (!result) {
       return NextResponse.json({
-        result: "Wait.\nClarity needs time.",
+        result:
+          "Wait.\nThere is not enough signal to make a confident call yet.\nActing while uncertain may increase regret.\nWrite your key facts and reassess in 24 hours.",
       });
     }
 

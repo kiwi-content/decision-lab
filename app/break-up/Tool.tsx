@@ -29,7 +29,11 @@ export default function BreakUp() {
     setLoading(false);
   };
 
-  const [decision, explanation] = result.split("\n");
+  const lines = result ? result.split("\n").filter((l) => l.trim() !== "") : [];
+  const decision = lines[0] ?? "";
+  const reason = lines[1] ?? "";
+  const caution = lines[2] ?? "";
+  const nextStep = lines[3] ?? "";
 
   return (
     <main className="stage-bg min-h-screen px-4 py-6 sm:px-10 sm:py-10">
@@ -46,7 +50,7 @@ export default function BreakUp() {
 
       <div className="card-pop mx-auto max-w-3xl bg-white p-6 sm:p-7">
         <textarea
-          placeholder="Describe your relationship situation..."
+          placeholder="How long have you been together? What keeps going wrong? Have you tried to fix it, and what happened?"
           className="lab-input mb-4 h-28 resize-none"
           value={situation}
           onChange={(e) => setSituation(e.target.value)}
@@ -62,9 +66,15 @@ export default function BreakUp() {
         {loading && <p className="mt-4 text-sm font-semibold text-[#4f4762]">Analyzing...</p>}
 
         {result && !loading && (
-          <div className="mt-6 rounded-2xl border border-black/10 bg-[#f7f4fc] p-5 text-left">
-            <h2 className="display-font mb-2 text-3xl font-bold uppercase text-[#1a1627]">{decision}</h2>
-            <p className="text-[#413a52]">{explanation}</p>
+          <div className="mt-6 rounded-2xl border border-black/10 bg-[#f7f4fc] p-5 text-left space-y-3">
+            <h2 className="display-font mb-1 text-3xl font-bold uppercase text-[#1a1627]">{decision}</h2>
+            {reason && <p className="text-[#413a52]">{reason}</p>}
+            {caution && (
+              <p className="text-sm text-[#7a6890] border-l-2 border-[#c0a8e0] pl-3">{caution}</p>
+            )}
+            {nextStep && (
+              <p className="text-sm font-semibold text-[#2a7d5c]">Next: {nextStep}</p>
+            )}
           </div>
         )}
       </div>
@@ -126,8 +136,8 @@ export default function BreakUp() {
 
         <p className="mt-6 text-sm text-[#4a425d]">
           Related:
-          <Link href="/move" className="ml-1 underline decoration-[#66c6ff] decoration-2 underline-offset-2">
-            Should I Move?
+          <Link href="/text-my-ex" className="ml-1 underline decoration-[#66c6ff] decoration-2 underline-offset-2">
+            Should I Text My Ex?
           </Link>
         </p>
       </div>

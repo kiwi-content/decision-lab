@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const metadata = {
   title: "Privacy Policy | Decision Lab",
   description:
@@ -63,6 +65,11 @@ export default function PrivacyPage() {
         <p className="text-[#4f5e7c]">
           We may update this policy to reflect product, legal, or operational changes. Material updates
           will be posted on this page with a revised effective date.
+        </p>
+        <p className="mt-4">
+          <Link href="/" className="text-[#4f5e7c] underline decoration-[#80caff] underline-offset-2">
+            Back to Home
+          </Link>
         </p>
       </section>
     </main>

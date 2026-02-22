@@ -74,6 +74,11 @@ export default function AboutPage() {
             Methodology
           </Link>.
         </p>
+        <p className="mt-4">
+          <Link href="/" className="text-[#4f5e7c] underline decoration-[#80caff] underline-offset-2">
+            Back to Home
+          </Link>
+        </p>
       </section>
     </main>
   );

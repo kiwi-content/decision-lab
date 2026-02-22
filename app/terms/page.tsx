@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const metadata = {
   title: "Terms of Service | Decision Lab",
   description:
@@ -56,6 +58,11 @@ export default function TermsPage() {
         <p className="text-[#4f5e7c]">
           We may revise these Terms from time to time. Continued use after updates constitutes acceptance
           of the revised terms.
+        </p>
+        <p className="mt-4">
+          <Link href="/" className="text-[#4f5e7c] underline decoration-[#80caff] underline-offset-2">
+            Back to Home
+          </Link>
         </p>
       </section>
     </main>

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const metadata = {
   title: "Contact | Decision Lab",
   description:
@@ -42,6 +44,11 @@ export default function ContactPage() {
         </p>
         <p className="text-sm text-[#6a7b9d]">
           To protect user privacy, please do not include highly sensitive personal information in email.
+        </p>
+        <p className="mt-4">
+          <Link href="/" className="text-[#4f5e7c] underline decoration-[#80caff] underline-offset-2">
+            Back to Home
+          </Link>
         </p>
       </section>
     </main>

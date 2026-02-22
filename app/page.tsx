@@ -21,39 +21,19 @@ export default function Home() {
           </nav>
         </header>
 
-        <div className="mb-10 grid gap-6 lg:grid-cols-[1.5fr_1fr]">
-          <div className="fade-in-up">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[#5d92d8]">
-              Run your decision before you live it
-            </p>
-            <h1 className="display-font text-5xl font-extrabold uppercase leading-[0.92] text-[#1d2440] sm:text-7xl lg:text-8xl">
-              Decision
-              <br />
-              Intelligence
-            </h1>
-            <p className="mt-6 max-w-2xl text-base text-[#4f5e7c] sm:text-xl">
-              Simulate hard choices with structured prompts. Evaluate emotion, risk,
-              timing, and long-term impact before acting.
-            </p>
-          </div>
-
-          <aside className="card-pop fade-in-up bg-[#ffffff] p-6">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#5d92d8]">Signal Summary</p>
-            <dl className="mt-4 space-y-4 text-xl text-[#7a8cb5]">
-              <div className="flex items-center justify-between">
-                <dt>Relationship scenarios</dt>
-                <dd className="font-bold text-[#34c98e]">2 tools</dd>
-              </div>
-              <div className="flex items-center justify-between">
-                <dt>Career and relocation</dt>
-                <dd className="font-bold text-[#1da8ef]">2 tools</dd>
-              </div>
-              <div className="flex items-center justify-between">
-                <dt>Declutter utility</dt>
-                <dd className="font-bold text-[#5f86ee]">1 tool</dd>
-              </div>
-            </dl>
-          </aside>
+        <div className="mb-8 fade-in-up">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[#5d92d8]">
+            Run your decision before you live it
+          </p>
+          <h1 className="display-font text-5xl font-extrabold uppercase leading-[0.92] text-[#1d2440] sm:text-7xl lg:text-8xl">
+            Decision
+            <br />
+            Intelligence
+          </h1>
+          <p className="mt-6 max-w-3xl text-base text-[#4f5e7c] sm:text-xl">
+            Simulate hard choices with structured prompts. Evaluate emotion, risk,
+            timing, and long-term impact before acting.
+          </p>
         </div>
 
         <div className="grid gap-5 md:grid-cols-2">

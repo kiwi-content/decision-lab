@@ -3,12 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Should I Break Up? | Relationship Decision Simulator",
-  description:
-    "Analyze emotional health, compatibility, and long-term impact before ending a relationship.",
-};
-
 export default function BreakUp() {
   const [situation, setSituation] = useState("");
   const [result, setResult] = useState("");

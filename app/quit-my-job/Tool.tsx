@@ -1,12 +1,7 @@
 "use client";
 
 import { useState } from "react";
-
-export const metadata = {
-  title: "Should I Quit My Job? | Career Decision Simulator",
-  description:
-    "Evaluate financial stability, stress level, and long-term growth before quitting your job.",
-};
+import Link from "next/link";
 
 export default function QuitMyJob() {
   const [situation, setSituation] = useState("");
@@ -123,6 +118,13 @@ export default function QuitMyJob() {
           Stay if there is real mentorship, clear progression, manageable stress, and
           compensation trending in the right direction. If those are improving, waiting
           3 to 6 months may produce a better exit.
+        </p>
+
+        <p className="mt-6 text-sm text-[#4a425d]">
+          Related:
+          <Link href="/move" className="ml-1 underline decoration-[#66c6ff] decoration-2 underline-offset-2">
+            Should I Move?
+          </Link>
         </p>
 
       </div>

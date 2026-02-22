@@ -1,9 +1,9 @@
 import Tool from "./Tool";
 
 export const metadata = {
-  title: "Should I Text My Ex? | Relationship Decision Simulator",
+  title: "Should I Quit My Job? | Career Decision Simulator",
   description:
-    "Analyze emotional risk and timing before texting your ex. A free decision simulator.",
+    "Evaluate financial stability, stress level, and long-term growth before quitting your job.",
 };
 
 export default function Page() {

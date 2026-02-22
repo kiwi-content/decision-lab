@@ -3,12 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Should I Move? | Relocation Decision Simulator",
-  description:
-    "Compare opportunity, cost, and life impact before deciding to move to a new city.",
-};
-
 export default function Move() {
   const [situation, setSituation] = useState("");
   const [result, setResult] = useState("");
@@ -132,9 +126,9 @@ export default function Move() {
         </p>
 
         <p className="mt-6 text-sm text-[#4a425d]">
-          Back to:
-          <Link href="/" className="ml-1 underline decoration-[#66c6ff] decoration-2 underline-offset-2">
-            Decision Lab
+          Related:
+          <Link href="/quit-my-job" className="ml-1 underline decoration-[#66c6ff] decoration-2 underline-offset-2">
+            Should I Quit My Job?
           </Link>
         </p>
       </div>

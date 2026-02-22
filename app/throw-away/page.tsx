@@ -1,9 +1,10 @@
+import Link from "next/link";
 import Tool from "./Tool";
 
 export const metadata = {
-  title: "Should I Throw This Away? | Declutter Decision Tool",
+  title: "Should I Throw This Away? | Declutter Decision Simulator",
   description:
-    "A simple declutter decision simulator to help you decide what to keep or throw away.",
+    "Assess emotional attachment versus practical utility before discarding personal items.",
 };
 
 export default function Page() {
@@ -67,6 +68,13 @@ export default function Page() {
           Combine three rules: one-year use rule, one-in/one-out for crowded categories,
           and container limits (each shelf or drawer has a fixed capacity). Together
           they prevent clutter from returning.
+        </p>
+
+        <p className="mt-6 text-sm text-[#4a425d]">
+          Related:
+          <Link href="/move" className="ml-1 underline decoration-[#66c6ff] decoration-2 underline-offset-2">
+            Should I Move?
+          </Link>
         </p>
 
       </div>

@@ -3,12 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Should I Text My Ex? | Relationship Decision Simulator",
-  description:
-    "Analyze emotional risk and timing before texting your ex. A free decision simulator to help you think clearly.",
-};
-
 export default function TextMyEx() {
   const [situation, setSituation] = useState("");
   const [result, setResult] = useState("");

@@ -76,7 +76,7 @@ export default function Home() {
         </div>
 
         <div className="mt-10 fade-in-up flex justify-center">
-          <div className="relative max-w-xl w-full rounded-2xl border border-[#ffe878] bg-[#fffdf0] p-6 shadow-md rotate-[-1deg] hover:rotate-0 transition-transform duration-300">
+          <div className="relative max-w-xl w-full rounded-2xl border border-[#ffe878] bg-[#fffdf0] p-6 shadow-md -rotate-1 hover:rotate-0 transition-transform duration-300">
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#b28b00]">
               Someone actually submitted this.
             </p>
@@ -84,10 +84,7 @@ export default function Home() {
               Should I Throw This Away? — Steve Perry&apos;s autographed Transformers T-shirt (1984)
             </p>
             <p className="mb-4 text-sm italic text-[#6b6040] leading-relaxed">
-              &ldquo;Steve Perry signed my shirt when I was 4, then told me to get lost.
-              I&apos;ve worn it without washing it ever since. Now it smells terrible —
-              my friends leave when they see it, and my boss fired me last week because
-              of the smell. I really love the shirt.&rdquo;
+              &ldquo;In 1984, when I was 4 years old, I was wearing my favorite Transformers T-shirt when I saw my favorite singer, Steve Perry of Journey. I asked him to sign my T-shirt, and he did. He wrote, &quot;I love Transformers. They are my favorite toys. Don&apos;t stop believing! - Steve Perry.&quot; Then, he said, &quot;There, I signed your fucking shirt. Now get the hell away from me, you stupid kid!&quot; I was so excited that I kept the shirt and wore it often without washing it. Now the shirt is old and smells terrible. People often visit my home, and say, &quot;What&apos;s that awful smell?&quot; Then, I show them the shirt, and they feel sick and leave my house. I wore the shirt to work last week, and my boss fired me because the shirt smelled so bad. I really love the shirt, but it&apos;s causing me problems.&rdquo;
             </p>
             <div className="border-t border-[#ffe878] pt-4 space-y-2">
               <p className="display-font text-2xl font-bold uppercase text-[#1d2440]">Throw it away.</p>

@@ -7,8 +7,6 @@ export const metadata = {
 };
 
 export default function Home() {
-  const currentYear = new Date().getFullYear();
-
   return (
     <main className="stage-bg min-h-screen px-4 py-6 sm:px-10 sm:py-10">
       <section className="panel-shell mx-auto max-w-6xl bg-[#fffff5] px-6 py-7 sm:px-10 sm:py-10">
@@ -151,7 +149,6 @@ export default function Home() {
             <Link href="/privacy" className="underline decoration-[#80caff] underline-offset-2">Privacy</Link>
             <Link href="/terms" className="underline decoration-[#80caff] underline-offset-2">Terms</Link>
           </div>
-          <p className="mt-3 text-xs text-[#6a89c4]/90">Copyright © {currentYear} Decision Lab. All rights reserved.</p>
         </footer>
       </section>
     </main>

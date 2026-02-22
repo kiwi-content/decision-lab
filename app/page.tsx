@@ -32,13 +32,12 @@ export default function Home() {
             Run your decision before you live it
           </p>
           <h1 className="display-font text-5xl font-extrabold uppercase leading-[0.92] text-[#1d2440] sm:text-7xl lg:text-8xl">
-            Decide
+            We&apos;ll Decide
             <br />
-            With Clarity
+            For You.
           </h1>
           <p className="mt-6 max-w-3xl text-base text-[#4f5e7c] sm:text-xl">
-            Work through hard choices with a human-centered lens. Weigh emotion,
-            risk, timing, and long-term impact before you take action.
+            You&apos;ve been going back and forth long enough. Describe your situation and get a straight answer.
           </p>
         </div>
 

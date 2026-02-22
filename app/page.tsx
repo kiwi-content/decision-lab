@@ -41,6 +41,41 @@ export default function Home() {
           </p>
         </div>
 
+        <div className="mb-8 fade-in-up">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#b28b00]">
+            Real example
+          </p>
+          <div className="rounded-2xl border border-[#ffe878] bg-[#fffdf0] p-6">
+            <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-[#b28b00]">
+              Should I Throw This Away? — Steve Perry&apos;s autographed Transformers T-shirt (1984)
+            </p>
+            <p className="mb-4 text-sm italic text-[#6b6040] leading-relaxed">
+              &ldquo;Steve Perry signed my shirt when I was 4, then told me to get lost.
+              I&apos;ve worn it without washing it ever since. Now it smells terrible —
+              my friends leave when they see it, and my boss fired me last week because
+              of the smell. I really love the shirt.&rdquo;
+            </p>
+            <div className="border-t border-[#ffe878] pt-4 space-y-2">
+              <p className="display-font text-2xl font-bold uppercase text-[#1d2440]">Throw it away.</p>
+              <p className="text-sm text-[#4f5e7c]">
+                The shirt has become a physical and social biohazard that has already cost you your professional livelihood and support system.
+              </p>
+              <p className="text-xs text-[#7a6890] border-l-2 border-[#c0a8e0] pl-3">
+                You may experience a temporary sense of grief or loss regarding the unique physical connection to your 1984 childhood memory.
+              </p>
+              <p className="text-xs font-semibold text-[#2a7d5c]">
+                Next: Take a high-resolution photograph of the signature to preserve the memory, then seal the shirt in a trash bag and remove it from your home immediately.
+              </p>
+            </div>
+            <Link
+              href="/throw-away"
+              className="mt-4 inline-block text-xs font-semibold text-[#b28b00] underline decoration-[#ffe878] underline-offset-2 hover:text-[#1d2440] transition-colors"
+            >
+              Try it yourself →
+            </Link>
+          </div>
+        </div>
+
         <div id="simulators" className="grid gap-5 md:grid-cols-2 scroll-mt-20">
           <Link href="/text-my-ex" className="card-pop fade-in-up bg-[#f893e1]/30 p-6">
             <p className="mb-2 text-xs font-bold uppercase tracking-wider text-[#7d68cc]">Relationship</p>

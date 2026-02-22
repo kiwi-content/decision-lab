@@ -8,69 +8,46 @@ export const metadata = {
 
 export default function MethodologyPage() {
   return (
-    <main className="max-w-3xl mx-auto px-6 py-16">
-      <h1 className="text-3xl font-bold mb-6">
-        Decision Methodology
-      </h1>
+    <main className="stage-bg min-h-screen px-4 py-6 sm:px-10 sm:py-10">
+      <section className="panel-shell mx-auto max-w-4xl bg-[#fffff5] px-6 py-10 sm:px-10">
+        <h1 className="display-font mb-6 text-4xl font-bold uppercase text-[#1d2440]">Decision Methodology</h1>
 
-      <p className="mb-6">
-        Decision Lab simulations are built on a structured analytical framework.
-        We do not generate emotional reassurance. We evaluate decision variables.
-      </p>
+        <p className="mb-6 text-[#4f5e7c]">
+          Every simulator uses the same framework so results stay consistent across different
+          life decisions. The goal is clarity through structured comparison, not emotional persuasion.
+        </p>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-4">
-        Core Evaluation Framework
-      </h2>
+        <h2 className="mb-3 text-2xl font-semibold text-[#1d2440]">Core Lens</h2>
+        <ul className="mb-8 list-disc space-y-2 pl-6 text-[#4f5e7c]">
+          <li>What are the likely outcomes in 1 week, 3 months, and 1 year?</li>
+          <li>Which option creates irreversible downside?</li>
+          <li>Which risks are acceptable and which are not?</li>
+          <li>Which choice aligns with your stated values and constraints?</li>
+        </ul>
 
-      <ul className="list-disc pl-6 space-y-2 mb-8">
-        <li>Risk vs Benefit comparison</li>
-        <li>Short-term vs Long-term consequence mapping</li>
-        <li>Emotional impulse vs Rational positioning</li>
-        <li>Reversibility of the decision</li>
-        <li>Financial, psychological, and social impact analysis</li>
-      </ul>
+        <h2 className="mb-3 text-2xl font-semibold text-[#1d2440]">Decision Process</h2>
+        <ul className="mb-8 list-disc space-y-2 pl-6 text-[#4f5e7c]">
+          <li>Parse your context into concrete decision variables</li>
+          <li>Compare upside and downside for each option</li>
+          <li>Assess timing, reversibility, and regret risk</li>
+          <li>Return a concise recommendation with rationale</li>
+        </ul>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-4">
-        Risk-Based Simulation Model
-      </h2>
+        <h2 className="mb-3 text-2xl font-semibold text-[#1d2440]">What We Prioritize</h2>
+        <ul className="mb-8 list-disc space-y-2 pl-6 text-[#4f5e7c]">
+          <li>Reducing avoidable harm</li>
+          <li>Improving long-term fit over short-term relief</li>
+          <li>Making trade-offs visible before action</li>
+          <li>Supporting clear, accountable decisions</li>
+        </ul>
 
-      <p className="mb-4">
-        Each tool categorizes input signals into structured variables.
-        Instead of offering advice, we simulate likely outcomes based on
-        risk exposure and decision timing.
-      </p>
-
-      <p className="mb-6">
-        Outputs are intentionally concise. The objective is clarity,
-        not persuasion.
-      </p>
-
-      <h2 className="text-2xl font-semibold mt-10 mb-4">
-        What We Prioritize
-      </h2>
-
-      <ul className="list-disc pl-6 space-y-2 mb-8">
-        <li>Minimizing irreversible damage</li>
-        <li>Reducing regret probability</li>
-        <li>Highlighting hidden trade-offs</li>
-        <li>Separating emotional urgency from strategic timing</li>
-      </ul>
-
-      <h2 className="text-2xl font-semibold mt-10 mb-4">
-        Important Disclaimer
-      </h2>
-
-      <p>
-        Decision Lab provides structured simulations for informational purposes only.
-        We do not provide legal, medical, or licensed financial advice.
-        Final decisions remain the responsibility of the user.
-      </p>
-      <p className="mt-6">
-        To understand the purpose behind this framework, visit our{" "}
-        <Link href="/about" className="underline">
-          About page
-        </Link>.
-      </p>
+        <p className="text-[#4f5e7c]">
+          For product purpose and scope, see{" "}
+          <Link href="/about" className="underline decoration-[#80caff] underline-offset-2">
+            About
+          </Link>.
+        </p>
+      </section>
     </main>
   );
 }

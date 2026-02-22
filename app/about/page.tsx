@@ -8,74 +8,47 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="max-w-3xl mx-auto px-6 py-16">
-      <h1 className="text-3xl font-bold mb-6">About Decision Lab</h1>
+    <main className="stage-bg min-h-screen px-4 py-6 sm:px-10 sm:py-10">
+      <section className="panel-shell mx-auto max-w-4xl bg-[#fffff5] px-6 py-10 sm:px-10">
+        <h1 className="display-font mb-6 text-4xl font-bold uppercase text-[#1d2440]">About Decision Lab</h1>
 
-      <p className="mb-4">
-        Decision Lab is an AI-powered decision simulation platform designed to
-        help you think more clearly before making important life choices.
-      </p>
+        <p className="mb-4 text-[#4f5e7c]">
+          Decision Lab helps people think clearly before making emotionally heavy life choices.
+          We focus on structure, trade-offs, and practical next steps rather than generic advice.
+        </p>
 
-      <p className="mb-4">
-        We do not tell you what to do. We structure your thinking.
-      </p>
-      <p className="mb-6">
-        Learn more about our structured framework on the{" "}
-        <Link href="/methodology" className="underline">
-          Methodology page
-        </Link>.
-      </p>
-      <p className="mb-8">
-        Unlike generic advice platforms, Decision Lab focuses on structured
-        risk analysis, trade-off evaluation, and scenario simulation to help
-        you understand consequences before you act.
-      </p>
+        <p className="mb-8 text-[#4f5e7c]">
+          Our principle is simple: we do not decide for you. We help you evaluate your options
+          with better framing so your final decision is intentional, not reactive.
+        </p>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-4">
-        Why Decision Lab Exists
-      </h2>
+        <h2 className="mb-3 text-2xl font-semibold text-[#1d2440]">Why This Exists</h2>
+        <p className="mb-6 text-[#4f5e7c]">
+          Important choices are often made in stress, uncertainty, or urgency. In those moments,
+          people need a structured way to slow down, compare outcomes, and spot blind spots.
+        </p>
 
-      <p className="mb-4">
-        Important life decisions are often made under emotional pressure and
-        incomplete risk assessment. Decision Lab introduces structured
-        reasoning into emotionally charged situations.
-      </p>
+        <h2 className="mb-3 text-2xl font-semibold text-[#1d2440]">What We Evaluate</h2>
+        <ul className="mb-6 list-disc space-y-2 pl-6 text-[#4f5e7c]">
+          <li>Short-term relief vs long-term consequences</li>
+          <li>Risk level and reversibility of each option</li>
+          <li>Emotional motivation vs practical feasibility</li>
+          <li>Financial, social, and mental load impact</li>
+        </ul>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-4">
-        How Our Simulation Works
-      </h2>
+        <h2 className="mb-3 text-2xl font-semibold text-[#1d2440]">What We Are Not</h2>
+        <p className="mb-6 text-[#4f5e7c]">
+          Decision Lab is an informational tool, not a substitute for licensed legal, medical,
+          therapy, or financial professionals.
+        </p>
 
-      <ul className="list-disc pl-6 mb-6 space-y-2">
-        <li>Risk vs Benefit analysis</li>
-        <li>Short-term vs Long-term consequences</li>
-        <li>Emotional impulse vs Rational positioning</li>
-        <li>Reversibility of the decision</li>
-        <li>Financial, psychological, and social impact review</li>
-      </ul>
-
-      <p className="mb-6">
-        The output is intentionally concise — because clarity does not require
-        excessive explanation.
-      </p>
-
-      <h2 className="text-2xl font-semibold mt-10 mb-4">
-        What Decision Lab Is Not
-      </h2>
-
-      <p className="mb-4">
-        Decision Lab does not provide legal, medical, or financial investment
-        advice. All simulations are informational tools designed to support
-        structured thinking.
-      </p>
-
-      <h2 className="text-2xl font-semibold mt-10 mb-4">
-        Our Long-Term Vision
-      </h2>
-
-      <p>
-        We aim to build a scalable library of structured decision simulations
-        across career, relationships, and life transitions.
-      </p>
+        <p className="text-[#4f5e7c]">
+          For details on the framework, visit{" "}
+          <Link href="/methodology" className="underline decoration-[#80caff] underline-offset-2">
+            Methodology
+          </Link>.
+        </p>
+      </section>
     </main>
   );
 }

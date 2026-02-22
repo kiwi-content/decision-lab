@@ -15,9 +15,15 @@ export default function Home() {
             Decision Lab
           </p>
           <nav className="flex items-center gap-2 text-xs font-semibold text-[#6a89c4] sm:text-sm">
-            <span className="rounded-full border border-[#80caff] bg-white px-4 py-2">Home</span>
-            <span className="rounded-full border border-[#80caff] bg-white px-4 py-2">Simulators</span>
-            <span className="rounded-full border border-[#80caff] bg-white px-4 py-2">Method</span>
+            <Link href="/" className="rounded-full border border-[#80caff] bg-white px-4 py-2 hover:bg-[#f3f9ff]">
+              Home
+            </Link>
+            <Link href="#simulators" className="rounded-full border border-[#80caff] bg-white px-4 py-2 hover:bg-[#f3f9ff]">
+              Simulators
+            </Link>
+            <Link href="/methodology" className="rounded-full border border-[#80caff] bg-white px-4 py-2 hover:bg-[#f3f9ff]">
+              Method
+            </Link>
           </nav>
         </header>
 
@@ -36,7 +42,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-2">
+        <div id="simulators" className="grid gap-5 md:grid-cols-2 scroll-mt-20">
           <Link href="/text-my-ex" className="card-pop fade-in-up bg-[#f893e1]/30 p-6">
             <p className="mb-2 text-xs font-bold uppercase tracking-wider text-[#7d68cc]">Relationship</p>
             <h2 className="display-font text-4xl font-bold leading-tight text-[#1d2440]">Should I Text My Ex?</h2>
@@ -69,6 +75,16 @@ export default function Home() {
             <p className="mt-3 text-xl text-[#4f5e7c]">Separate practical utility from attachment to declutter cleanly.</p>
           </Link>
         </div>
+
+        <footer className="mt-10 border-t border-[#80caff]/50 pt-5 text-xs text-[#6a89c4] sm:text-sm">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <Link href="/about" className="underline decoration-[#80caff] underline-offset-2">About</Link>
+            <Link href="/methodology" className="underline decoration-[#80caff] underline-offset-2">Methodology</Link>
+            <Link href="/contact" className="underline decoration-[#80caff] underline-offset-2">Contact</Link>
+            <Link href="/privacy" className="underline decoration-[#80caff] underline-offset-2">Privacy</Link>
+            <Link href="/terms" className="underline decoration-[#80caff] underline-offset-2">Terms</Link>
+          </div>
+        </footer>
       </section>
     </main>
   );

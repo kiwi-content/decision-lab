@@ -6,39 +6,34 @@ export const metadata = {
 
 export default function TermsPage() {
   return (
-    <main className="max-w-3xl mx-auto px-6 py-16">
-      <h1 className="text-3xl font-bold mb-6">Terms of Service</h1>
+    <main className="stage-bg min-h-screen px-4 py-6 sm:px-10 sm:py-10">
+      <section className="panel-shell mx-auto max-w-4xl bg-[#fffff5] px-6 py-10 sm:px-10">
+        <h1 className="display-font mb-6 text-4xl font-bold uppercase text-[#1d2440]">Terms of Service</h1>
 
-      <p className="mb-6">
-        By using Decision Lab, you agree to the following terms.
-      </p>
+        <p className="mb-6 text-[#4f5e7c]">
+          By using Decision Lab, you agree to these terms.
+        </p>
 
-      <h2 className="text-xl font-semibold mt-8 mb-3">
-        Informational Use Only
-      </h2>
+        <h2 className="mb-3 text-2xl font-semibold text-[#1d2440]">Informational Tool Only</h2>
+        <p className="mb-6 text-[#4f5e7c]">
+          Simulation outputs are informational. They are not legal, medical, financial, or therapeutic advice.
+        </p>
 
-      <p className="mb-6">
-        Decision Lab provides structured decision simulations for informational
-        purposes only. Results do not constitute legal, medical, financial, or
-        professional advice.
-      </p>
+        <h2 className="mb-3 text-2xl font-semibold text-[#1d2440]">User Responsibility</h2>
+        <p className="mb-6 text-[#4f5e7c]">
+          You remain fully responsible for decisions and actions taken based on the content produced.
+        </p>
 
-      <h2 className="text-xl font-semibold mt-8 mb-3">
-        User Responsibility
-      </h2>
+        <h2 className="mb-3 text-2xl font-semibold text-[#1d2440]">Acceptable Use</h2>
+        <p className="mb-6 text-[#4f5e7c]">
+          You agree not to misuse the service, attempt abuse of system endpoints, or submit unlawful content.
+        </p>
 
-      <p className="mb-6">
-        Users are solely responsible for decisions made based on simulation
-        outputs.
-      </p>
-
-      <h2 className="text-xl font-semibold mt-8 mb-3">
-        Service Availability
-      </h2>
-
-      <p>
-        We may modify or discontinue services at any time without prior notice.
-      </p>
+        <h2 className="mb-3 text-2xl font-semibold text-[#1d2440]">Service Availability</h2>
+        <p className="text-[#4f5e7c]">
+          Features may change over time. We may update or discontinue parts of the service without prior notice.
+        </p>
+      </section>
     </main>
   );
 }

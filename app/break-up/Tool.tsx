@@ -90,22 +90,45 @@ export default function BreakUp() {
         </h3>
 
         <p><strong className="text-[#1f1a2d]">How do I know if I should break up?</strong></p>
-        <p className="text-[#4a425d]">If communication repeatedly fails and emotional health declines, reassess the relationship.</p>
+        <p className="text-[#4a425d]">
+          Pay attention to repeated patterns: unresolved conflict, emotional
+          disrespect, fear of honesty, and shrinking self-esteem. If repair attempts
+          keep failing, that is stronger evidence than temporary good days.
+        </p>
 
         <p><strong className="text-[#1f1a2d]">Is staying together for comfort a bad idea?</strong></p>
-        <p className="text-[#4a425d]">Comfort alone is not a strong foundation for long-term happiness.</p>
+        <p className="text-[#4a425d]">
+          Comfort is valuable, but it should not replace compatibility. If you stay
+          mainly to avoid grief, you may trade short-term relief for long-term
+          resentment.
+        </p>
 
         <p><strong className="text-[#1f1a2d]">Should I break up if I still love them?</strong></p>
-        <p className="text-[#4a425d]">Love alone may not resolve compatibility issues.</p>
+        <p className="text-[#4a425d]">
+          Possibly. Love can coexist with incompatibility around trust, life goals,
+          communication, or safety. Ask whether this relationship helps both of you
+          grow or keeps both of you stuck.
+        </p>
 
         <p><strong className="text-[#1f1a2d]">Is breaking up selfish?</strong></p>
-        <p className="text-[#4a425d]">Ending a relationship respectfully can be healthy for both people.</p>
+        <p className="text-[#4a425d]">
+          Not when done with honesty and care. Staying in a relationship you no longer
+          believe in can be more harmful than a respectful, clear ending.
+        </p>
 
         <p><strong className="text-[#1f1a2d]">How do I break up kindly?</strong></p>
-        <p className="text-[#4a425d]">Communicate clearly and honestly without blaming.</p>
+        <p className="text-[#4a425d]">
+          Be direct, private, and specific without attacking character. Use short
+          statements, avoid mixed messages, and set clear boundaries about future
+          contact so healing can begin.
+        </p>
 
         <p><strong className="text-[#1f1a2d]">What if I regret breaking up?</strong></p>
-        <p className="text-[#4a425d]">Regret can happen, but clarity often grows with time.</p>
+        <p className="text-[#4a425d]">
+          Regret is common in the first weeks because the routine changed. Give
+          yourself a no-contact reflection window, review why you left, and evaluate
+          patterns rather than isolated memories.
+        </p>
 
         <p className="mt-6 text-sm text-[#4a425d]">
           Related:

@@ -86,22 +86,45 @@ export default function TextMyEx() {
         </h3>
 
         <p><strong className="text-[#1f1a2d]">Is it a good idea to text my ex?</strong></p>
-        <p className="text-[#4a425d]">It depends on your emotional stability and the reason for reaching out.</p>
+        <p className="text-[#4a425d]">
+          It can be, but only if your goal is clear. If you are seeking reassurance,
+          trying to stop loneliness, or hoping for a specific response, wait until
+          your emotions settle and you can accept any outcome.
+        </p>
 
         <p><strong className="text-[#1f1a2d]">How long should I wait before texting my ex?</strong></p>
-        <p className="text-[#4a425d]">Many relationship experts suggest waiting until emotions have settled.</p>
+        <p className="text-[#4a425d]">
+          A practical baseline is at least 30 days of no contact after a breakup,
+          longer if the ending was intense. The better signal is emotional readiness:
+          you can send one message without spiraling about the reply.
+        </p>
 
         <p><strong className="text-[#1f1a2d]">Will texting my ex reopen emotional wounds?</strong></p>
-        <p className="text-[#4a425d]">It can, especially if closure has not been fully processed.</p>
+        <p className="text-[#4a425d]">
+          Yes, especially when unresolved conflict or mixed signals remain. Before
+          reaching out, ask yourself whether you have support in place if the response
+          is cold, delayed, or absent.
+        </p>
 
         <p><strong className="text-[#1f1a2d]">Should I text my ex for closure?</strong></p>
-        <p className="text-[#4a425d]">Closure often comes from within rather than from the other person.</p>
+        <p className="text-[#4a425d]">
+          Usually, no. Closure from an ex is unpredictable. A healthier approach is
+          to write what you wish you could say, identify what you need to release,
+          and then decide whether contact still serves you.
+        </p>
 
         <p><strong className="text-[#1f1a2d]">Is texting my ex a sign of weakness?</strong></p>
-        <p className="text-[#4a425d]">No, but motivation matters. Be honest about your intention.</p>
+        <p className="text-[#4a425d]">
+          No. What matters is intention and boundaries. A short, respectful message
+          can be healthy; repeated messaging to reduce anxiety usually leads to regret.
+        </p>
 
         <p><strong className="text-[#1f1a2d]">What if my ex doesn’t respond?</strong></p>
-        <p className="text-[#4a425d]">Non-response is also information and should be emotionally prepared for.</p>
+        <p className="text-[#4a425d]">
+          Treat non-response as a complete answer, not a puzzle to solve. Do not send
+          follow-ups for 7 days. Use that space to refocus on routines, friends, and
+          your own healing plan.
+        </p>
 
 
         <p className="mt-6 text-sm text-[#4a425d]">

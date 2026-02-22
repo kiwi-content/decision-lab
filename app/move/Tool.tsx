@@ -90,22 +90,46 @@ export default function Move() {
         </h3>
 
         <p><strong className="text-[#1f1a2d]">How do I know if I should move?</strong></p>
-        <p className="text-[#4a425d]">Compare opportunity, cost, and long-term lifestyle benefits.</p>
+        <p className="text-[#4a425d]">
+          Build a weighted score for career upside, cost of living, support system,
+          and day-to-day lifestyle. If one city wins across your top three priorities,
+          the decision is usually clearer.
+        </p>
 
         <p><strong className="text-[#1f1a2d]">Is moving to another city worth it?</strong></p>
-        <p className="text-[#4a425d]">If career or quality-of-life gains outweigh disruption, it may be worthwhile.</p>
+        <p className="text-[#4a425d]">
+          It is worth it when the long-term gain is concrete, not vague. Define what
+          success looks like in 12 months: income, commute, social life, and health.
+          If those metrics improve, the disruption may be justified.
+        </p>
 
         <p><strong className="text-[#1f1a2d]">How stressful is moving?</strong></p>
-        <p className="text-[#4a425d]">Moving can be stressful, but structured planning reduces risk.</p>
+        <p className="text-[#4a425d]">
+          Stress is high but manageable with planning. Reduce pressure by breaking it
+          into phases: housing, budget, logistics, and social setup, each with a
+          timeline and backup option.
+        </p>
 
         <p><strong className="text-[#1f1a2d]">Should I move for a job opportunity?</strong></p>
-        <p className="text-[#4a425d]">Evaluate salary, growth potential, and personal support systems.</p>
+        <p className="text-[#4a425d]">
+          Compare total compensation after taxes and housing, not just salary. Also
+          check role quality, manager fit, promotion path, and whether the move
+          improves your weekly quality of life.
+        </p>
 
         <p><strong className="text-[#1f1a2d]">How much savings should I have before moving?</strong></p>
-        <p className="text-[#4a425d]">Experts recommend covering at least 3 months of expenses.</p>
+        <p className="text-[#4a425d]">
+          A strong target is 4 to 6 months of expenses plus one-time moving costs,
+          deposits, and setup purchases. This buffer prevents bad short-term decisions
+          under financial pressure.
+        </p>
 
         <p><strong className="text-[#1f1a2d]">What are signs I should stay?</strong></p>
-        <p className="text-[#4a425d]">If your current environment aligns with your goals, reconsider relocation.</p>
+        <p className="text-[#4a425d]">
+          Stay if your current city already supports your goals, relationships, and
+          mental bandwidth. If you are moving mainly to escape a temporary problem,
+          solve that first before relocating.
+        </p>
 
         <p className="mt-6 text-sm text-[#4a425d]">
           Back to:

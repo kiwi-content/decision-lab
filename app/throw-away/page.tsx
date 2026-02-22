@@ -30,38 +30,43 @@ export default function Page() {
 
         <p><strong className="text-[#1f1a2d]">How do I know if I should throw something away?</strong></p>
         <p className="text-[#4a425d]">
-          If you have not used the item in over a year and it does not serve your
-          current lifestyle, it may be time to let it go.
+          Use a simple filter: function, frequency, and replacement cost. If it has
+          no clear purpose, you have not used it in 12 months, and replacing it is
+          easy, it is usually safe to let go.
         </p>
 
         <p><strong className="text-[#1f1a2d]">What if I regret throwing it away?</strong></p>
         <p className="text-[#4a425d]">
-          If the item is inexpensive or easy to replace, the risk of regret is low.
-          Most regret comes from emotional attachment rather than practical loss.
+          For high-uncertainty items, use a 30-day holding box. If you do not reach
+          for it during that period, regret risk is low. This creates proof, not just
+          guesswork.
         </p>
 
         <p><strong className="text-[#1f1a2d]">Should I throw something away if I feel guilty?</strong></p>
         <p className="text-[#4a425d]">
-          Guilt alone is not a strong reason to keep something. Evaluate usefulness
-          and whether it supports your present needs.
+          Guilt is common with gifts or expensive purchases, but it is not a storage
+          strategy. Keep items that actively serve your current life, not past
+          versions of yourself.
         </p>
 
         <p><strong className="text-[#1f1a2d]">Is decluttering good for mental health?</strong></p>
         <p className="text-[#4a425d]">
-          Yes. Removing unnecessary clutter can reduce stress and improve focus
-          by creating a more organized environment.
+          For many people, yes. Less visual noise reduces decision fatigue and makes
+          routines easier to maintain. The key is steady progress, not one extreme
+          cleanout.
         </p>
 
         <p><strong className="text-[#1f1a2d]">How often should I declutter?</strong></p>
         <p className="text-[#4a425d]">
-          Many people declutter once or twice per year. Seasonal reviews help
-          maintain clarity and prevent accumulation.
+          Do light weekly resets and one deeper seasonal review each quarter. Frequent
+          small sessions are more sustainable than marathon sessions once a year.
         </p>
 
         <p><strong className="text-[#1f1a2d]">What is the best declutter rule?</strong></p>
         <p className="text-[#4a425d]">
-          A common rule is the “one year rule.” If you haven’t used it in the past
-          year, it may not be essential.
+          Combine three rules: one-year use rule, one-in/one-out for crowded categories,
+          and container limits (each shelf or drawer has a fixed capacity). Together
+          they prevent clutter from returning.
         </p>
 
       </div>

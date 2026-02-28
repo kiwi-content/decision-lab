@@ -1,9 +1,20 @@
+import type { Metadata } from "next";
 import "./globals.css";
 
-export const metadata = {
+export const metadata: Metadata = {
+  metadataBase: new URL("https://decisionlab.vercel.app"),
+  applicationName: "Decision Lab",
   title: "Decision Lab | Life Decision Simulators",
   description:
-    "Run your decision before you live it. Free decision simulators for relationships, career, moving, and decluttering.",
+    "Quit your job? Text your ex at 2 AM? Break up tonight? Do it here first — zero consequences, full clarity.",
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
+  openGraph: {
+    siteName: "Decision Lab",
+  },
 };
 
 export default function RootLayout({

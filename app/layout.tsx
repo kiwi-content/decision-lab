@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const faviconPath = "/icon.png?v=20260228";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://decisionlab.vercel.app"),
   applicationName: "Decision Lab",
@@ -8,9 +10,9 @@ export const metadata: Metadata = {
   description:
     "Quit your job? Text your ex at 2 AM? Break up tonight? Do it here first — zero consequences, full clarity.",
   icons: {
-    icon: "/icon.png",
-    shortcut: "/icon.png",
-    apple: "/icon.png",
+    icon: faviconPath,
+    shortcut: faviconPath,
+    apple: faviconPath,
   },
   openGraph: {
     siteName: "Decision Lab",

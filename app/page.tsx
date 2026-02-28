@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Decision Lab | Life Decision Simulators",
   description:
-    "Run your decision before you live it. Free decision simulators for real-life choices.",
+    "Quit your job? Text your ex at 2 AM? Break up tonight? Do it here first — zero consequences, full clarity.",
 };
 
 export default function Home() {
@@ -29,15 +29,15 @@ export default function Home() {
 
         <div className="mb-8 fade-in-up">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[#5d92d8]">
-            Run your decision before you live it
+            For people who flip a coin and then flip it again.
           </p>
           <h1 className="display-font text-5xl font-extrabold uppercase leading-[0.92] text-[#1d2440] sm:text-7xl lg:text-8xl">
-            We&apos;ll Decide
+            Decide
             <br />
-            For You.
+            Already.
           </h1>
           <p className="mt-6 max-w-3xl text-base text-[#4f5e7c] sm:text-xl">
-            You&apos;ve been going back and forth long enough. Describe your situation and get a straight answer.
+            You&apos;ve been going back and forth for weeks. Type what&apos;s on your mind. We&apos;ll tell you what to do.
           </p>
         </div>
 

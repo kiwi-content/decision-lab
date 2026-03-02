@@ -1,7 +1,8 @@
 import { MetadataRoute } from "next";
+import { siteUrl } from "./site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://decisionlab.vercel.app";
+  const baseUrl = siteUrl;
 
   return [
     {

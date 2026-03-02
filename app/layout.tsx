@@ -1,21 +1,38 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { siteDescription, siteName, siteUrl } from "./site";
 
 const faviconPath = "/icon.png?v=20260228";
+const siteTitle = "Decision Lab | Life Decision Simulators";
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: siteName,
+  alternateName: "DecisionLab",
+  url: siteUrl,
+};
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://decisionlab.vercel.app"),
-  applicationName: "Decision Lab",
-  title: "Decision Lab | Life Decision Simulators",
-  description:
-    "Quit your job? Text your ex at 2 AM? Break up tonight? Do it here first — zero consequences, full clarity.",
+  metadataBase: new URL(siteUrl),
+  applicationName: siteName,
+  title: siteTitle,
+  description: siteDescription,
+  alternates: {
+    canonical: "/",
+  },
+  manifest: "/manifest.webmanifest",
   icons: {
     icon: faviconPath,
     shortcut: faviconPath,
     apple: faviconPath,
   },
   openGraph: {
-    siteName: "Decision Lab",
+    type: "website",
+    url: siteUrl,
+    siteName,
+    title: siteTitle,
+    description: siteDescription,
   },
 };
 
@@ -28,6 +45,12 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+      </head>
       <body className="antialiased min-h-screen flex flex-col">
         <div className="flex-1">{children}</div>
         <footer className="px-4 pb-6 pt-2 text-center text-xs text-[#6a89c4]/90 sm:px-10">

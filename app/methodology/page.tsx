@@ -64,6 +64,36 @@ export default function MethodologyPage() {
           not at replacing experts.
         </p>
 
+        <h2 className="mb-3 text-2xl font-semibold text-[#1d2440]">Start With a Tool</h2>
+        <p className="mb-4 text-[#4f5e7c]">Choose the simulator that matches your current decision:</p>
+        <ul className="mb-8 list-disc space-y-2 pl-6 text-[#4f5e7c]">
+          <li>
+            <Link href="/text-my-ex" className="underline decoration-[#80caff] underline-offset-2">
+              Should I Text My Ex?
+            </Link>
+          </li>
+          <li>
+            <Link href="/break-up" className="underline decoration-[#80caff] underline-offset-2">
+              Should I Break Up?
+            </Link>
+          </li>
+          <li>
+            <Link href="/quit-my-job" className="underline decoration-[#80caff] underline-offset-2">
+              Should I Quit My Job?
+            </Link>
+          </li>
+          <li>
+            <Link href="/move" className="underline decoration-[#80caff] underline-offset-2">
+              Should I Move?
+            </Link>
+          </li>
+          <li>
+            <Link href="/throw-away" className="underline decoration-[#80caff] underline-offset-2">
+              Should I Throw It Away?
+            </Link>
+          </li>
+        </ul>
+
         <p className="text-[#4f5e7c]">
           Want to know why we built this?{" "}
           <Link href="/about" className="underline decoration-[#80caff] underline-offset-2">

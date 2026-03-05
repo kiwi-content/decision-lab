@@ -8,9 +8,28 @@ const siteTitle = "Decision Lab | 60-Second Decision Tools";
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": `${siteUrl}#website`,
   name: siteName,
   alternateName: "DecisionLab",
   url: siteUrl,
+  description: siteDescription,
+  publisher: {
+    "@id": `${siteUrl}#organization`,
+  },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: `${siteUrl}/?q={search_term_string}`,
+    "query-input": "required name=search_term_string",
+  },
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${siteUrl}#organization`,
+  name: siteName,
+  url: siteUrl,
+  logo: `${siteUrl}/icon.png`,
 };
 
 export const metadata: Metadata = {
@@ -45,6 +64,12 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
+          key="organization-jsonld"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          key="website-jsonld"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
       </head>

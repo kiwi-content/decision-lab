@@ -58,7 +58,7 @@ export default function Tool() {
       <div className="mb-6 text-center">
         <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-black/50">Declutter Lab</p>
         <h1 className="display-font text-4xl font-extrabold uppercase leading-tight text-[#1a1627] sm:text-5xl">
-        Should I Throw This Away?
+        Should I Throw It Away?
         </h1>
       </div>
 

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Script from "next/script";
 
 export const metadata = {
   title: "Should I Text My Ex, Break Up, Move, or Quit My Job? | Decision Lab",
@@ -12,6 +13,11 @@ export const metadata = {
 export default function Home() {
   return (
     <main className="stage-bg min-h-screen px-4 py-6 sm:px-10 sm:py-10">
+      <Script
+        src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.3/dist/dotlottie-wc.js"
+        type="module"
+        strategy="afterInteractive"
+      />
       <section className="panel-shell mx-auto max-w-6xl bg-[#fffff5] px-6 py-7 sm:px-10 sm:py-10">
         <header className="mb-10 flex flex-wrap items-center justify-between gap-4">
           <p className="rounded-full border border-[#80caff] bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-[#5884c8]">
@@ -31,6 +37,15 @@ export default function Home() {
         </header>
 
         <div className="mb-8 fade-in-up">
+          <div className="mb-5 flex justify-center">
+            <div
+              className="rounded-2xl border border-[#80caff]/60 bg-[#f5fbff] px-3 py-2 shadow-sm"
+              dangerouslySetInnerHTML={{
+                __html:
+                  '<dotlottie-wc src="https://lottie.host/c7008fb6-47b9-48c4-a91e-7d03434b9d95/3siN9Waswc.lottie" stateMachineId="StateMachine1" style="width: 180px;height: 180px"></dotlottie-wc>',
+              }}
+            />
+          </div>
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[#5d92d8]">
             60-second decision tools for real-life choices.
           </p>

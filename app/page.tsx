@@ -37,46 +37,27 @@ export default function Home() {
         </header>
 
         <div className="mb-8 fade-in-up">
-          <div className="mb-5 flex justify-center">
+          <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-3xl">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[#5d92d8]">
+                60-second decision tools for real-life choices.
+              </p>
+              <h1 className="display-font text-5xl font-extrabold uppercase leading-[0.92] text-[#1d2440] sm:text-7xl lg:text-8xl">
+                Should I Text
+                <br />
+                My Ex?
+              </h1>
+              <p className="mt-6 max-w-3xl text-base text-[#4f5e7c] sm:text-xl">
+                Break up, move, quit your job, or throw it away? Pick a tool below and get a clear next step in about 60 seconds.
+              </p>
+            </div>
             <div
-              className="rounded-2xl border border-[#80caff]/60 bg-[#f5fbff] px-3 py-2 shadow-sm"
+              className="self-center md:self-end"
               dangerouslySetInnerHTML={{
                 __html:
-                  '<dotlottie-wc src="https://lottie.host/c7008fb6-47b9-48c4-a91e-7d03434b9d95/3siN9Waswc.lottie" stateMachineId="StateMachine1" style="width: 180px;height: 180px"></dotlottie-wc>',
+                  '<dotlottie-wc src="https://lottie.host/c7008fb6-47b9-48c4-a91e-7d03434b9d95/3siN9Waswc.lottie" stateMachineId="StateMachine1" style="width: 160px;height: 160px"></dotlottie-wc>',
               }}
             />
-          </div>
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[#5d92d8]">
-            60-second decision tools for real-life choices.
-          </p>
-          <h1 className="display-font text-5xl font-extrabold uppercase leading-[0.92] text-[#1d2440] sm:text-7xl lg:text-8xl">
-            Should I Text
-            <br />
-            My Ex?
-          </h1>
-          <p className="mt-6 max-w-3xl text-base text-[#4f5e7c] sm:text-xl">
-            Break up, move, quit your job, or throw it away? Pick a tool below and get a clear next step in about 60 seconds.
-          </p>
-        </div>
-
-        <div className="mb-8 rounded-2xl border border-[#80caff]/70 bg-[#f5fbff] p-4 text-sm text-[#4f5e7c] sm:p-5 sm:text-base">
-          <p className="mb-3 font-semibold text-[#2d4b84]">Popular decision tools:</p>
-          <div className="flex flex-wrap gap-2.5">
-            <Link href="/text-my-ex" className="underline decoration-[#80caff] underline-offset-2 hover:text-[#1d2440]">
-              Should I Text My Ex?
-            </Link>
-            <Link href="/break-up" className="underline decoration-[#80caff] underline-offset-2 hover:text-[#1d2440]">
-              Should I Break Up?
-            </Link>
-            <Link href="/move" className="underline decoration-[#80caff] underline-offset-2 hover:text-[#1d2440]">
-              Should I Move?
-            </Link>
-            <Link href="/quit-my-job" className="underline decoration-[#80caff] underline-offset-2 hover:text-[#1d2440]">
-              Should I Quit My Job?
-            </Link>
-            <Link href="/throw-away" className="underline decoration-[#80caff] underline-offset-2 hover:text-[#1d2440]">
-              Should I Throw It Away?
-            </Link>
           </div>
         </div>
 

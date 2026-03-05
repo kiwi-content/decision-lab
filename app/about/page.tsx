@@ -1,9 +1,13 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "About Decision Lab",
+  title: "About Decision Lab | Method, Scope, and Decision Tool Boundaries",
   description:
-    "Decision Lab is an AI-powered decision simulation platform focused on structured risk analysis and rational clarity before major life decisions.",
+    "Learn what Decision Lab is for, how our decision tools work, and where users should seek licensed professional advice.",
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function AboutPage() {

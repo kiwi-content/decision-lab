@@ -3,7 +3,7 @@ import "./globals.css";
 import { siteDescription, siteName, siteUrl } from "./site";
 
 const faviconPath = "/icon.png?v=20260228";
-const siteTitle = "Decision Lab | Life Decision Simulators";
+const siteTitle = "Decision Lab | 60-Second Decision Tools";
 
 const websiteJsonLd = {
   "@context": "https://schema.org",
@@ -18,9 +18,6 @@ export const metadata: Metadata = {
   applicationName: siteName,
   title: siteTitle,
   description: siteDescription,
-  alternates: {
-    canonical: "/",
-  },
   manifest: "/manifest.webmanifest",
   icons: {
     icon: faviconPath,

@@ -1,9 +1,9 @@
 import Tool from "./Tool";
 
 export const metadata = {
-  title: "Should I Throw This Away? | Declutter Decision Simulator",
+  title: "Should I Throw It Away? 60-Second Keep-or-Toss Tool | The Decision Lab",
   description:
-    "You haven't touched it in 3 years but can't let go. Trash or treasure? Let the simulator decide before your closet does.",
+    "Decide in 60 seconds whether to keep, donate, recycle, or discard with a practical decision tool.",
 };
 
 export default function Page() {

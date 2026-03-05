@@ -1,6 +1,6 @@
 export const siteName = "Decision Lab";
 export const siteDescription =
-  "Quit your job? Text your ex at 2 AM? Break up tonight? Do it here first - zero consequences, full clarity.";
+  "Use fast decision tools for relationships, relocation, career choices, and decluttering. Get a clear next step in about 60 seconds.";
 
 const defaultSiteUrl = "https://decisionlab.today";
 

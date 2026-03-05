@@ -1,9 +1,9 @@
 import Tool from "./Tool";
 
 export const metadata = {
-  title: "Should I Break Up? | Relationship Decision Simulator",
+  title: "Should I Break Up? 60-Second Relationship Decision Tool | The Decision Lab",
   description:
-    "You're already emotionally checked out. But is it the right call? Simulate the breakup before the tears start.",
+    "Use a practical 60-second tool to decide whether to stay, set boundaries, or break up with more clarity and less regret.",
 };
 
 export default function Page() {

@@ -1,9 +1,9 @@
 import Tool from "./Tool";
 
 export const metadata = {
-  title: "Should I Move? | Relocation Decision Simulator",
+  title: "Should I Move? 60-Second Relocation Decision Tool | The Decision Lab",
   description:
-    "New city = new life? Or just new problems? Run your move before you sign the lease and regret it.",
+    "Use a fast decision tool to weigh cost, commute, lifestyle, and timing so you can decide whether moving now is the right call.",
 };
 
 export default function Page() {

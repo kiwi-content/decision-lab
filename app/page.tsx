@@ -1,9 +1,12 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Decision Lab | Life Decision Simulators",
+  title: "Should I Text My Ex, Break Up, Move, or Quit My Job? | Decision Lab",
   description:
-    "Quit your job? Text your ex at 2 AM? Break up tonight? Do it here first — zero consequences, full clarity.",
+    "Use fast decision tools for relationships, relocation, career choices, and decluttering. Get a clear next step in about 60 seconds.",
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function Home() {
@@ -29,15 +32,15 @@ export default function Home() {
 
         <div className="mb-8 fade-in-up">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[#5d92d8]">
-            For people who flip a coin and then flip it again.
+            60-second decision tools for real-life choices.
           </p>
           <h1 className="display-font text-5xl font-extrabold uppercase leading-[0.92] text-[#1d2440] sm:text-7xl lg:text-8xl">
-            Decide
+            Should I Text
             <br />
-            Already.
+            My Ex?
           </h1>
           <p className="mt-6 max-w-3xl text-base text-[#4f5e7c] sm:text-xl">
-            You&apos;ve been going back and forth for weeks. Type what&apos;s on your mind. We&apos;ll tell you what to do.
+            Break up, move, quit your job, or throw it away? Pick a tool below and get a clear next step in about 60 seconds.
           </p>
         </div>
 
@@ -70,7 +73,7 @@ export default function Home() {
         <div className="mt-5">
           <Link href="/throw-away" className="card-pop fade-in-up block bg-[#ffe878]/42 p-6">
             <p className="mb-2 text-xs font-bold uppercase tracking-wider text-[#b28b00]">Declutter</p>
-            <h2 className="display-font text-4xl font-bold text-[#1d2440]">Should I Throw This Away?</h2>
+            <h2 className="display-font text-4xl font-bold text-[#1d2440]">Should I Throw It Away?</h2>
             <p className="mt-3 text-xl text-[#4f5e7c]">Separate practical utility from attachment to declutter cleanly.</p>
           </Link>
         </div>
@@ -82,7 +85,7 @@ export default function Home() {
                 Someone actually submitted this.
               </p>
               <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-[#b28b00]">
-                Should I Throw This Away? — Steve Perry&apos;s autographed Transformers T-shirt (1984)
+                Should I Throw It Away? — Steve Perry&apos;s autographed Transformers T-shirt (1984)
               </p>
               <p className="mb-4 text-sm italic text-[#6b6040] leading-relaxed">
                 &ldquo;In 1984, when I was 4 years old, I was wearing my favorite Transformers T-shirt when I saw my favorite singer, Steve Perry of Journey. I asked him to sign my T-shirt, and he did. He wrote, &quot;I love Transformers. They are my favorite toys. Don&apos;t stop believing! - Steve Perry.&quot; Then, he said, &quot;There, I signed your fucking shirt. Now get the hell away from me, you stupid kid!&quot; I was so excited that I kept the shirt and wore it often without washing it. Now the shirt is old and smells terrible. People often visit my home, and say, &quot;What&apos;s that awful smell?&quot; Then, I show them the shirt, and they feel sick and leave my house. I wore the shirt to work last week, and my boss fired me because the shirt smelled so bad. I really love the shirt, but it&apos;s causing me problems.&rdquo;

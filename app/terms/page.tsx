@@ -4,6 +4,10 @@ export const metadata = {
   title: "Terms of Service | Decision Lab",
   description:
     "Terms and conditions for using Decision Lab decision simulations.",
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function TermsPage() {

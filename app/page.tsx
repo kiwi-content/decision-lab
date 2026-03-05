@@ -44,6 +44,27 @@ export default function Home() {
           </p>
         </div>
 
+        <div className="mb-8 rounded-2xl border border-[#80caff]/70 bg-[#f5fbff] p-4 text-sm text-[#4f5e7c] sm:p-5 sm:text-base">
+          <p className="mb-3 font-semibold text-[#2d4b84]">Popular decision tools:</p>
+          <div className="flex flex-wrap gap-2.5">
+            <Link href="/text-my-ex" className="underline decoration-[#80caff] underline-offset-2 hover:text-[#1d2440]">
+              Should I Text My Ex?
+            </Link>
+            <Link href="/break-up" className="underline decoration-[#80caff] underline-offset-2 hover:text-[#1d2440]">
+              Should I Break Up?
+            </Link>
+            <Link href="/move" className="underline decoration-[#80caff] underline-offset-2 hover:text-[#1d2440]">
+              Should I Move?
+            </Link>
+            <Link href="/quit-my-job" className="underline decoration-[#80caff] underline-offset-2 hover:text-[#1d2440]">
+              Should I Quit My Job?
+            </Link>
+            <Link href="/throw-away" className="underline decoration-[#80caff] underline-offset-2 hover:text-[#1d2440]">
+              Should I Throw It Away?
+            </Link>
+          </div>
+        </div>
+
         <div id="simulators" className="grid gap-5 md:grid-cols-2 scroll-mt-20">
           <Link href="/text-my-ex" className="card-pop fade-in-up bg-[#f893e1]/30 p-6">
             <p className="mb-2 text-xs font-bold uppercase tracking-wider text-[#7d68cc]">Relationship</p>

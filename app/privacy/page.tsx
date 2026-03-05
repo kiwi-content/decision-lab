@@ -4,6 +4,10 @@ export const metadata = {
   title: "Privacy Policy | Decision Lab",
   description:
     "Learn how Decision Lab handles user data and privacy.",
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function PrivacyPage() {

@@ -55,7 +55,7 @@ export default function Home() {
               className="self-center md:self-end"
               dangerouslySetInnerHTML={{
                 __html:
-                  '<dotlottie-wc src="https://lottie.host/c7008fb6-47b9-48c4-a91e-7d03434b9d95/3siN9Waswc.lottie" stateMachineId="StateMachine1" style="width: 160px;height: 160px"></dotlottie-wc>',
+                  '<dotlottie-wc src="https://lottie.host/c7008fb6-47b9-48c4-a91e-7d03434b9d95/3siN9Waswc.lottie" autoplay loop style="width: 160px;height: 160px"></dotlottie-wc>',
               }}
             />
           </div>

@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { canonicalHost } from "./app/site";
 
 const localHosts = new Set(["localhost", "127.0.0.1", "::1"]);
+const vercelHosts = new Set(["decisionlab.vercel.app"]);
 
 export function proxy(request: NextRequest) {
   const hostHeader = request.headers.get("host");
@@ -10,17 +11,17 @@ export function proxy(request: NextRequest) {
   }
 
   const host = hostHeader.split(":")[0].toLowerCase();
-  const isCanonicalHost = host === canonicalHost;
-  const isWwwVariant = host === `www.${canonicalHost}`;
-  const isVercelHost = host === "decisionlab.vercel.app";
 
-  if (localHosts.has(host) || isCanonicalHost || (!isWwwVariant && !isVercelHost)) {
+  if (localHosts.has(host) || host === canonicalHost || !vercelHosts.has(host)) {
     return NextResponse.next();
   }
 
   const redirectUrl = request.nextUrl.clone();
-  redirectUrl.protocol = "https";
   redirectUrl.host = canonicalHost;
+
+  if (redirectUrl.host === host) {
+    return NextResponse.next();
+  }
 
   return NextResponse.redirect(redirectUrl, 308);
 }

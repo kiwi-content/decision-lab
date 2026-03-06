@@ -40,23 +40,23 @@ export default function Home() {
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[#5d92d8]">
             60-second decision tools for real-life choices.
           </p>
-          <div className="flex flex-col gap-3 sm:inline-flex sm:w-fit sm:flex-row sm:items-end sm:gap-0">
+          <div className="sm:relative sm:w-fit sm:max-w-full">
             <h1 className="display-font text-5xl font-extrabold uppercase leading-[0.92] text-[#1d2440] sm:text-7xl lg:text-8xl">
               Should I Text
               <br />
               My Ex?
             </h1>
+            <p className="mt-4 max-w-3xl text-base text-[#4f5e7c] sm:pr-44 sm:text-xl lg:pr-52">
+              Break up, move, quit your job, or throw it away? Pick a tool below and get a clear next step in about 60 seconds.
+            </p>
             <div
-              className="self-center pb-1 [transform:scaleX(-1)] sm:-ml-[2rem] sm:self-auto sm:pb-2 lg:-ml-[2.75rem]"
+              className="mt-2 self-center [transform:scaleX(-1)] sm:absolute sm:left-full sm:top-[5.75rem] sm:mt-0 sm:-ml-6 lg:top-[6.75rem] lg:-ml-8"
               dangerouslySetInnerHTML={{
                 __html:
-                  '<dotlottie-wc src="https://lottie.host/c7008fb6-47b9-48c4-a91e-7d03434b9d95/3siN9Waswc.lottie" autoplay loop style="width: 150px;height: 150px"></dotlottie-wc>',
+                  '<dotlottie-wc src="https://lottie.host/c7008fb6-47b9-48c4-a91e-7d03434b9d95/3siN9Waswc.lottie" autoplay loop style="width: 210px;height: 210px"></dotlottie-wc>',
               }}
             />
           </div>
-          <p className="mt-6 max-w-3xl text-base text-[#4f5e7c] sm:text-xl">
-            Break up, move, quit your job, or throw it away? Pick a tool below and get a clear next step in about 60 seconds.
-          </p>
         </div>
 
         <div id="simulators" className="grid gap-5 md:grid-cols-2 scroll-mt-20">

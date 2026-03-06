@@ -40,14 +40,14 @@ export default function Home() {
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[#5d92d8]">
             60-second decision tools for real-life choices.
           </p>
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:gap-4">
+          <div className="flex flex-col gap-3 sm:inline-flex sm:w-fit sm:flex-row sm:items-end sm:gap-0">
             <h1 className="display-font text-5xl font-extrabold uppercase leading-[0.92] text-[#1d2440] sm:text-7xl lg:text-8xl">
               Should I Text
               <br />
               My Ex?
             </h1>
             <div
-              className="self-center pb-1 [transform:scaleX(-1)] sm:-ml-10 sm:self-auto sm:pb-2 lg:-ml-14"
+              className="self-center pb-1 [transform:scaleX(-1)] sm:-ml-[3.5rem] sm:self-auto sm:pb-2 lg:-ml-[4.75rem]"
               dangerouslySetInnerHTML={{
                 __html:
                   '<dotlottie-wc src="https://lottie.host/c7008fb6-47b9-48c4-a91e-7d03434b9d95/3siN9Waswc.lottie" autoplay loop style="width: 150px;height: 150px"></dotlottie-wc>',

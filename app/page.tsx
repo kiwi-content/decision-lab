@@ -46,14 +46,14 @@ export default function Home() {
               <br />
               My Ex?
             </h1>
-            <p className="mt-4 max-w-3xl text-base text-[#4f5e7c] sm:pr-44 sm:text-xl lg:pr-52">
+            <p className="mt-4 max-w-3xl text-base text-[#4f5e7c] sm:pr-40 sm:text-xl lg:pr-48">
               Break up, move, quit your job, or throw it away? Pick a tool below and get a clear next step in about 60 seconds.
             </p>
             <div
-              className="mt-2 self-center [transform:scaleX(-1)] sm:absolute sm:left-full sm:top-[6.1rem] sm:mt-0 sm:-ml-20 lg:top-[7rem] lg:-ml-24"
+              className="mt-2 self-center [transform:scaleX(-1)] sm:absolute sm:left-full sm:top-[6.1rem] sm:mt-0 sm:-ml-28 lg:top-[7rem] lg:-ml-32"
               dangerouslySetInnerHTML={{
                 __html:
-                  '<dotlottie-wc src="https://lottie.host/c7008fb6-47b9-48c4-a91e-7d03434b9d95/3siN9Waswc.lottie" autoplay loop style="width: 176px;height: 176px"></dotlottie-wc>',
+                  '<dotlottie-wc src="https://lottie.host/c7008fb6-47b9-48c4-a91e-7d03434b9d95/3siN9Waswc.lottie" autoplay loop style="width: 164px;height: 164px"></dotlottie-wc>',
               }}
             />
           </div>

@@ -14,19 +14,19 @@ export const metadata = {
 const trustSignals = [
   {
     label: "No signup",
-    detail: "Jump straight into a tool without making an account.",
+    detail: "Start instantly",
   },
   {
     label: "About 60 seconds",
-    detail: "Short flows built to get you to a recommendation fast.",
+    detail: "Short, fast flows",
   },
   {
     label: "Private by default",
-    detail: "No inbox, no profile, and no need to share more than you want.",
+    detail: "No inbox or profile",
   },
   {
     label: "Clear next step",
-    detail: "Each tool gives you a verdict, the risk, and what to do next.",
+    detail: "Verdict plus next move",
   },
 ];
 
@@ -39,7 +39,7 @@ export default function Home() {
         strategy="afterInteractive"
       />
       <section className="panel-shell mx-auto max-w-6xl bg-[#fffff5] px-6 py-7 sm:px-10 sm:py-10">
-        <header className="mb-10 flex flex-wrap items-center justify-between gap-4">
+        <header className="mb-7 flex flex-wrap items-center justify-between gap-4 sm:mb-8">
           <p className="rounded-full border border-[#80caff] bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-[#5884c8]">
             Decision Lab
           </p>
@@ -56,8 +56,8 @@ export default function Home() {
           </nav>
         </header>
 
-        <div className="hero-lockup mb-8 fade-in-up">
-          <p className="hero-kicker mb-3 text-sm font-semibold uppercase tracking-widest text-[#5d92d8]">
+        <div className="hero-lockup mb-6 fade-in-up sm:mb-7">
+          <p className="hero-kicker mb-2 text-sm font-semibold uppercase tracking-widest text-[#5d92d8]">
             60-second decision tools for real-life choices.
           </p>
           <div className="hero-grid">
@@ -67,22 +67,28 @@ export default function Home() {
                 <br />
                 My Ex?
               </h1>
-              <p className="hero-subtitle mt-4 max-w-3xl text-base text-[#4f5e7c] sm:text-xl">
+              <p className="hero-subtitle mt-3 max-w-3xl text-base text-[#4f5e7c] sm:text-xl">
                 Break up, move, quit your job, or throw it away? Pick a tool below and get a clear next step in about 60 seconds.
               </p>
+              <Link
+                href="#simulators"
+                className="hero-jump mt-4 inline-flex w-fit items-center rounded-full border border-[#80caff] bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-[#5884c8] transition-colors hover:bg-[#f3f9ff] sm:text-[0.72rem]"
+              >
+                Pick a tool now
+              </Link>
             </div>
-            <ChickenLottie className="hero-chicken" size={156} />
+            <ChickenLottie className="hero-chicken" size={148} />
           </div>
         </div>
 
-        <div className="mb-10 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="mb-6 flex flex-wrap gap-2 sm:mb-7 sm:gap-3">
           {trustSignals.map((signal) => (
             <div
               key={signal.label}
-              className="fade-in-up rounded-[1.35rem] border border-[#80caff]/45 bg-white/82 px-4 py-4 shadow-[0_10px_24px_rgba(30,55,88,0.06)]"
+              className="fade-in-up inline-flex items-center gap-2 rounded-full border border-[#80caff]/45 bg-white/88 px-3 py-2 shadow-[0_6px_18px_rgba(30,55,88,0.05)]"
             >
-              <p className="text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#5d92d8]">{signal.label}</p>
-              <p className="mt-2 text-sm leading-relaxed text-[#4f5e7c]">{signal.detail}</p>
+              <p className="text-[0.62rem] font-bold uppercase tracking-[0.18em] text-[#5d92d8]">{signal.label}</p>
+              <p className="text-xs text-[#4f5e7c]">{signal.detail}</p>
             </div>
           ))}
         </div>

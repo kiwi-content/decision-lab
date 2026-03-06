@@ -75,6 +75,32 @@ body {
   box-shadow: 0 14px 28px rgba(55, 90, 130, 0.2);
 }
 
+.card-cta {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.45rem;
+  border: 1px solid rgba(29, 36, 64, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  padding: 0.65rem 0.95rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1d2440;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+
+.card-pop:hover .card-cta {
+  transform: translateX(3px);
+  border-color: rgba(29, 36, 64, 0.24);
+  background: rgba(255, 255, 255, 0.95);
+}
+
 .lab-input {
   width: 100%;
   border: 1px solid rgba(128, 202, 255, 0.55);

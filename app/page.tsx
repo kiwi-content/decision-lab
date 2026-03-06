@@ -46,50 +46,55 @@ export default function Home() {
               <br />
               My Ex?
             </h1>
-            <p className="mt-4 max-w-3xl text-base text-[#4f5e7c] sm:pr-44 sm:text-xl lg:pr-52">
+            <p className="mt-4 max-w-3xl text-base text-[#4f5e7c] sm:pr-48 sm:text-xl lg:pr-56">
               Break up, move, quit your job, or throw it away? Pick a tool below and get a clear next step in about 60 seconds.
             </p>
             <div
-              className="mt-2 self-center [transform:scaleX(-1)] sm:absolute sm:left-full sm:top-[5.75rem] sm:mt-0 sm:-ml-6 lg:top-[6.75rem] lg:-ml-8"
+              className="mt-2 self-center [transform:scaleX(-1)] sm:absolute sm:left-full sm:top-[6.1rem] sm:mt-0 sm:-ml-16 lg:top-[7rem] lg:-ml-20"
               dangerouslySetInnerHTML={{
                 __html:
-                  '<dotlottie-wc src="https://lottie.host/c7008fb6-47b9-48c4-a91e-7d03434b9d95/3siN9Waswc.lottie" autoplay loop style="width: 210px;height: 210px"></dotlottie-wc>',
+                  '<dotlottie-wc src="https://lottie.host/c7008fb6-47b9-48c4-a91e-7d03434b9d95/3siN9Waswc.lottie" autoplay loop style="width: 188px;height: 188px"></dotlottie-wc>',
               }}
             />
           </div>
         </div>
 
         <div id="simulators" className="grid gap-5 md:grid-cols-2 scroll-mt-20">
-          <Link href="/text-my-ex" className="card-pop fade-in-up bg-[#f893e1]/30 p-6">
+          <Link href="/text-my-ex" className="card-pop fade-in-up group flex h-full flex-col bg-[#f893e1]/30 p-6">
             <p className="mb-2 text-xs font-bold uppercase tracking-wider text-[#7d68cc]">Relationship</p>
             <h2 className="display-font text-4xl font-bold leading-tight text-[#1d2440]">Should I Text My Ex?</h2>
             <p className="mt-3 text-xl text-[#4f5e7c]">Assess emotional risk, readiness, and communication intent.</p>
+            <span className="card-cta mt-6">Open tool -&gt;</span>
           </Link>
 
-          <Link href="/quit-my-job" className="card-pop fade-in-up bg-[#80caff]/30 p-6">
+          <Link href="/quit-my-job" className="card-pop fade-in-up group flex h-full flex-col bg-[#80caff]/30 p-6">
             <p className="mb-2 text-xs font-bold uppercase tracking-wider text-[#5d92d8]">Career</p>
             <h2 className="display-font text-4xl font-bold leading-tight text-[#1d2440]">Should I Quit My Job?</h2>
             <p className="mt-3 text-xl text-[#4f5e7c]">Balance runway, stress, growth potential, and downside risk.</p>
+            <span className="card-cta mt-6">Open tool -&gt;</span>
           </Link>
 
-          <Link href="/break-up" className="card-pop fade-in-up bg-[#a180ff]/24 p-6">
+          <Link href="/break-up" className="card-pop fade-in-up group flex h-full flex-col bg-[#a180ff]/24 p-6">
             <p className="mb-2 text-xs font-bold uppercase tracking-wider text-[#6d59be]">Relationship</p>
             <h2 className="display-font text-4xl font-bold leading-tight text-[#1d2440]">Should I Break Up?</h2>
             <p className="mt-3 text-xl text-[#4f5e7c]">Review recurring patterns, compatibility, and future alignment.</p>
+            <span className="card-cta mt-6">Open tool -&gt;</span>
           </Link>
 
-          <Link href="/move" className="card-pop fade-in-up bg-[#91e5b3]/28 p-6">
+          <Link href="/move" className="card-pop fade-in-up group flex h-full flex-col bg-[#91e5b3]/28 p-6">
             <p className="mb-2 text-xs font-bold uppercase tracking-wider text-[#2a9f76]">Relocation</p>
             <h2 className="display-font text-4xl font-bold leading-tight text-[#1d2440]">Should I Move?</h2>
             <p className="mt-3 text-xl text-[#4f5e7c]">Model opportunity, cost shifts, and quality-of-life tradeoffs.</p>
+            <span className="card-cta mt-6">Open tool -&gt;</span>
           </Link>
         </div>
 
         <div className="mt-5">
-          <Link href="/throw-away" className="card-pop fade-in-up block bg-[#ffe878]/42 p-6">
+          <Link href="/throw-away" className="card-pop fade-in-up group flex h-full flex-col bg-[#ffe878]/42 p-6">
             <p className="mb-2 text-xs font-bold uppercase tracking-wider text-[#b28b00]">Declutter</p>
             <h2 className="display-font text-4xl font-bold text-[#1d2440]">Should I Throw It Away?</h2>
             <p className="mt-3 text-xl text-[#4f5e7c]">Separate practical utility from attachment to declutter cleanly.</p>
+            <span className="card-cta mt-6">Open tool -&gt;</span>
           </Link>
         </div>
 

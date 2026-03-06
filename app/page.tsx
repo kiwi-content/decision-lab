@@ -70,12 +70,6 @@ export default function Home() {
               <p className="hero-subtitle mt-3 max-w-3xl text-base text-[#4f5e7c] sm:text-xl">
                 Break up, move, quit your job, or throw it away? Pick a tool below and get a clear next step in about 60 seconds.
               </p>
-              <Link
-                href="#simulators"
-                className="hero-jump mt-4 inline-flex w-fit items-center rounded-full border border-[#80caff] bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-[#5884c8] transition-colors hover:bg-[#f3f9ff] sm:text-[0.72rem]"
-              >
-                Pick a tool now
-              </Link>
             </div>
             <ChickenLottie className="hero-chicken" size={148} />
           </div>

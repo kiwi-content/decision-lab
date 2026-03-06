@@ -47,7 +47,7 @@ export default function Home() {
               My Ex?
             </h1>
             <div
-              className="self-center pb-1 [transform:scaleX(-1)] sm:-ml-[3.5rem] sm:self-auto sm:pb-2 lg:-ml-[4.75rem]"
+              className="self-center pb-1 [transform:scaleX(-1)] sm:-ml-[2rem] sm:self-auto sm:pb-2 lg:-ml-[2.75rem]"
               dangerouslySetInnerHTML={{
                 __html:
                   '<dotlottie-wc src="https://lottie.host/c7008fb6-47b9-48c4-a91e-7d03434b9d95/3siN9Waswc.lottie" autoplay loop style="width: 150px;height: 150px"></dotlottie-wc>',

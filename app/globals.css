@@ -29,6 +29,15 @@ body {
   font-family: var(--font-body);
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(128, 202, 255, 0.72);
+  outline-offset: 4px;
+}
+
 .display-font {
   font-family: var(--font-display);
 }
@@ -63,6 +72,54 @@ body {
   box-shadow: 0 16px 48px rgba(30, 55, 88, 0.14);
 }
 
+.hero-grid {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.hero-copy {
+  max-width: 52rem;
+}
+
+.hero-subtitle {
+  max-width: 46rem;
+}
+
+.hero-chicken {
+  justify-self: center;
+  transform: scaleX(-1);
+}
+
+@media (min-width: 640px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr) clamp(8.75rem, 13vw, 10.5rem);
+    align-items: start;
+    column-gap: 0.25rem;
+  }
+
+  .hero-copy {
+    padding-right: clamp(0.75rem, 2vw, 1.5rem);
+  }
+
+  .hero-chicken {
+    align-self: start;
+    justify-self: start;
+    margin-top: clamp(4.4rem, 8vw, 6rem);
+    margin-left: clamp(-5rem, -7vw, -3.75rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr) clamp(9.25rem, 12vw, 10.75rem);
+  }
+
+  .hero-chicken {
+    margin-top: clamp(5.2rem, 7vw, 6.6rem);
+    margin-left: clamp(-6rem, -6vw, -4.75rem);
+  }
+}
+
 .card-pop {
   border: 1px solid rgba(128, 202, 255, 0.5);
   border-radius: 1.3rem;
@@ -71,6 +128,11 @@ body {
 }
 
 .card-pop:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(55, 90, 130, 0.2);
+}
+
+.card-pop:focus-visible {
   transform: translateY(-4px);
   box-shadow: 0 14px 28px rgba(55, 90, 130, 0.2);
 }
@@ -96,6 +158,12 @@ body {
 }
 
 .card-pop:hover .card-cta {
+  transform: translateX(3px);
+  border-color: rgba(29, 36, 64, 0.24);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.card-pop:focus-visible .card-cta {
   transform: translateX(3px);
   border-color: rgba(29, 36, 64, 0.24);
   background: rgba(255, 255, 255, 0.95);
@@ -142,5 +210,28 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .fade-in-up {
+    animation: none !important;
+  }
+
+  .card-pop:hover,
+  .card-pop:focus-visible,
+  .card-pop:hover .card-cta,
+  .card-pop:focus-visible .card-cta,
+  .lab-btn:hover {
+    transform: none !important;
   }
 }

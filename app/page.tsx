@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Script from "next/script";
+import ChickenLottie from "./ChickenLottie";
 
 export const metadata = {
   title: "Should I Text My Ex, Break Up, Move, or Quit My Job? | Decision Lab",
@@ -9,6 +10,25 @@ export const metadata = {
     canonical: "/",
   },
 };
+
+const trustSignals = [
+  {
+    label: "No signup",
+    detail: "Jump straight into a tool without making an account.",
+  },
+  {
+    label: "About 60 seconds",
+    detail: "Short flows built to get you to a recommendation fast.",
+  },
+  {
+    label: "Private by default",
+    detail: "No inbox, no profile, and no need to share more than you want.",
+  },
+  {
+    label: "Clear next step",
+    detail: "Each tool gives you a verdict, the risk, and what to do next.",
+  },
+];
 
 export default function Home() {
   return (
@@ -36,27 +56,35 @@ export default function Home() {
           </nav>
         </header>
 
-        <div className="mb-8 fade-in-up">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[#5d92d8]">
+        <div className="hero-lockup mb-8 fade-in-up">
+          <p className="hero-kicker mb-3 text-sm font-semibold uppercase tracking-widest text-[#5d92d8]">
             60-second decision tools for real-life choices.
           </p>
-          <div className="sm:relative sm:w-fit sm:max-w-full">
-            <h1 className="display-font text-5xl font-extrabold uppercase leading-[0.92] text-[#1d2440] sm:text-7xl lg:text-8xl">
-              Should I Text
-              <br />
-              My Ex?
-            </h1>
-            <p className="mt-4 max-w-3xl text-base text-[#4f5e7c] sm:pr-40 sm:text-xl lg:pr-48">
-              Break up, move, quit your job, or throw it away? Pick a tool below and get a clear next step in about 60 seconds.
-            </p>
-            <div
-              className="mt-2 self-center [transform:scaleX(-1)] sm:absolute sm:left-full sm:top-[6.1rem] sm:mt-0 sm:-ml-[13rem] lg:top-[7rem] lg:-ml-[14rem]"
-              dangerouslySetInnerHTML={{
-                __html:
-                  '<dotlottie-wc src="https://lottie.host/c7008fb6-47b9-48c4-a91e-7d03434b9d95/3siN9Waswc.lottie" autoplay loop style="width: 164px;height: 164px"></dotlottie-wc>',
-              }}
-            />
+          <div className="hero-grid">
+            <div className="hero-copy">
+              <h1 className="hero-title display-font text-5xl font-extrabold uppercase leading-[0.92] text-[#1d2440] sm:text-7xl lg:text-8xl">
+                Should I Text
+                <br />
+                My Ex?
+              </h1>
+              <p className="hero-subtitle mt-4 max-w-3xl text-base text-[#4f5e7c] sm:text-xl">
+                Break up, move, quit your job, or throw it away? Pick a tool below and get a clear next step in about 60 seconds.
+              </p>
+            </div>
+            <ChickenLottie className="hero-chicken" size={156} />
           </div>
+        </div>
+
+        <div className="mb-10 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+          {trustSignals.map((signal) => (
+            <div
+              key={signal.label}
+              className="fade-in-up rounded-[1.35rem] border border-[#80caff]/45 bg-white/82 px-4 py-4 shadow-[0_10px_24px_rgba(30,55,88,0.06)]"
+            >
+              <p className="text-[0.68rem] font-bold uppercase tracking-[0.2em] text-[#5d92d8]">{signal.label}</p>
+              <p className="mt-2 text-sm leading-relaxed text-[#4f5e7c]">{signal.detail}</p>
+            </div>
+          ))}
         </div>
 
         <div id="simulators" className="grid gap-5 md:grid-cols-2 scroll-mt-20">

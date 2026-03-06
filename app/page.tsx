@@ -3,9 +3,9 @@ import Script from "next/script";
 import ChickenLottie from "./ChickenLottie";
 
 export const metadata = {
-  title: "Should I Text My Ex, Break Up, Move, or Quit My Job? | Decision Lab",
+  title: "Stuck on a decision? | Decision Lab",
   description:
-    "Use fast decision tools for relationships, relocation, career choices, and decluttering. Get a clear next step in about 60 seconds.",
+    "Use fast decision tools for exes, breakups, moves, jobs, and everything else you keep overthinking.",
   alternates: {
     canonical: "/",
   },
@@ -46,12 +46,10 @@ export default function Home() {
           <div className="hero-grid">
             <div className="hero-copy">
               <h1 className="hero-title display-font text-5xl font-extrabold uppercase leading-[0.92] text-[#1d2440] sm:text-7xl lg:text-8xl">
-                Should I Text
-                <br />
-                My Ex?
+                Stuck on a decision?
               </h1>
               <p className="hero-subtitle mt-3 max-w-3xl text-base text-[#4f5e7c] sm:text-xl">
-                Break up, move, quit your job, or throw it away? Pick a tool below and get a clear next step in about 60 seconds.
+                Use fast decision tools for exes, breakups, moves, jobs, and everything else you keep overthinking.
               </p>
             </div>
             <ChickenLottie className="hero-chicken" size={148} />

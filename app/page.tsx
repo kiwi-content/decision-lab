@@ -38,24 +38,7 @@ export default function Home() {
         type="module"
         strategy="afterInteractive"
       />
-      <section className="panel-shell mx-auto max-w-6xl bg-[#fffff5] px-6 py-7 sm:px-10 sm:py-10">
-        <header className="mb-7 flex flex-wrap items-center justify-between gap-4 sm:mb-8">
-          <p className="rounded-full border border-[#80caff] bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-[#5884c8]">
-            Decision Lab
-          </p>
-          <nav className="flex items-center gap-2 text-xs font-semibold text-[#6a89c4] sm:text-sm">
-            <Link href="/" className="rounded-full border border-[#80caff] bg-white px-4 py-2 hover:bg-[#f3f9ff]">
-              Home
-            </Link>
-            <Link href="#simulators" className="rounded-full border border-[#80caff] bg-white px-4 py-2 hover:bg-[#f3f9ff]">
-              Simulators
-            </Link>
-            <Link href="/methodology" className="rounded-full border border-[#80caff] bg-white px-4 py-2 hover:bg-[#f3f9ff]">
-              Method
-            </Link>
-          </nav>
-        </header>
-
+      <section className="panel-shell mx-auto max-w-6xl bg-[#fffff5] px-6 pt-6 pb-7 sm:px-10 sm:pt-8 sm:pb-10">
         <div className="hero-lockup mb-6 fade-in-up sm:mb-7">
           <p className="hero-kicker mb-2 text-sm font-semibold uppercase tracking-widest text-[#5d92d8]">
             60-second decision tools for real-life choices.

@@ -50,7 +50,7 @@ export default function Home() {
               Break up, move, quit your job, or throw it away? Pick a tool below and get a clear next step in about 60 seconds.
             </p>
             <div
-              className="mt-2 self-center [transform:scaleX(-1)] sm:absolute sm:left-full sm:top-[6.1rem] sm:mt-0 sm:-ml-28 lg:top-[7rem] lg:-ml-32"
+              className="mt-2 self-center [transform:scaleX(-1)] sm:absolute sm:left-full sm:top-[6.1rem] sm:mt-0 sm:-ml-[13rem] lg:top-[7rem] lg:-ml-[14rem]"
               dangerouslySetInnerHTML={{
                 __html:
                   '<dotlottie-wc src="https://lottie.host/c7008fb6-47b9-48c4-a91e-7d03434b9d95/3siN9Waswc.lottie" autoplay loop style="width: 164px;height: 164px"></dotlottie-wc>',

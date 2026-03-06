@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Tool from "./Tool";
 
 export const metadata: Metadata = {
-  title: "Should I Move? 60-Second Relocation Decision Tool | The Decision Lab",
+  title: "Should I Move? 60-Second Relocation Decision Tool | Decision Lab",
   description:
     "Use a fast decision tool to weigh cost, commute, lifestyle, and timing so you can decide whether moving now is the right call.",
   alternates: {

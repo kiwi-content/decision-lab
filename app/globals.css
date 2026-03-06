@@ -12,8 +12,8 @@
   --accent-green: #91e5b3;
   --ink-soft: #1d2440;
   --ink-muted: #54607a;
-  --font-display: "Arial Black", "Avenir Next Condensed", "Trebuchet MS", sans-serif;
-  --font-body: "Avenir Next", "Trebuchet MS", "Verdana", sans-serif;
+  --font-display: var(--font-black-ops), "Arial Black", sans-serif;
+  --font-body: var(--font-inter), "Inter", sans-serif;
 }
 
 @theme inline {

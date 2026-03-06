@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Tool from "./Tool";
 
 export const metadata: Metadata = {
-  title: "Should I Quit My Job? 60-Second Career Decision Tool | The Decision Lab",
+  title: "Should I Quit My Job? 60-Second Career Decision Tool | Decision Lab",
   description:
     "Use a practical decision tool to weigh runway, burnout, growth, and downside risk before deciding whether to quit your job.",
   alternates: {

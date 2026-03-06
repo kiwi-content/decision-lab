@@ -1,13 +1,12 @@
 import { NextResponse } from "next/server";
 
-export async function POST(req: Request) {
-  try {
-    const { story, tool } = await req.json();
+const VALID_TOOLS = ["text-my-ex", "quit-my-job", "break-up", "move", "throw-away"] as const;
+type ToolType = (typeof VALID_TOOLS)[number];
 
-    let systemPrompt = "";
+const MAX_STORY_LENGTH = 5000;
 
-    if (tool === "text-my-ex") {
-      systemPrompt = `
+const systemPrompts: Record<ToolType, string> = {
+  "text-my-ex": `
 You are a structured decision simulator for personal choices.
 
 Evaluate whether this person should text their ex based on their situation.
@@ -19,9 +18,8 @@ Line 1: Exactly one of: "Do not text." / "Wait." / "Text cautiously."
 Line 2: The single strongest reason for your decision, referencing their specific situation.
 Line 3: One concrete risk or caution they should be aware of.
 Line 4: One specific, actionable next step they should take today.
-`;
-    } else if (tool === "quit-my-job") {
-      systemPrompt = `
+`,
+  "quit-my-job": `
 You are a structured decision simulator for career decisions.
 
 Evaluate whether this person should quit their job based on their situation.
@@ -33,9 +31,8 @@ Line 1: Exactly one of: "Do not quit." / "Quit with a plan." / "Quit now."
 Line 2: The single strongest reason for your decision, referencing their specific situation.
 Line 3: One concrete risk or caution they should be aware of.
 Line 4: One specific, actionable next step they should take this week.
-`;
-    } else if (tool === "break-up") {
-      systemPrompt = `
+`,
+  "break-up": `
 You are a structured decision simulator for relationship decisions.
 
 Evaluate whether this person should end their relationship based on their situation.
@@ -47,9 +44,8 @@ Line 1: Exactly one of: "Stay and work on it." / "Take space first." / "End it."
 Line 2: The single strongest reason for your decision, referencing their specific situation.
 Line 3: One concrete risk or caution they should be aware of.
 Line 4: One specific, actionable next step they should take this week.
-`;
-    } else if (tool === "move") {
-      systemPrompt = `
+`,
+  "move": `
 You are a structured decision simulator for relocation decisions.
 
 Evaluate whether this person should move based on their situation.
@@ -61,9 +57,8 @@ Line 1: Exactly one of: "Stay for now." / "Plan the move." / "Move."
 Line 2: The single strongest reason for your decision, referencing their specific situation.
 Line 3: One concrete risk or caution they should be aware of.
 Line 4: One specific, actionable next step they should take this month.
-`;
-    } else if (tool === "throw-away") {
-      systemPrompt = `
+`,
+  "throw-away": `
 You are a structured decision simulator for decluttering decisions.
 
 Evaluate whether this person should throw away this object based on their situation.
@@ -75,22 +70,35 @@ Line 1: Exactly one of: "Keep it." / "Hold for 30 days." / "Throw it away."
 Line 2: The single strongest reason for your decision, referencing their specific situation.
 Line 3: One concrete risk or caution they should be aware of.
 Line 4: One specific, actionable next step they should take today.
-`;
-    } else {
-      systemPrompt = `
-You are a structured decision simulator for decluttering decisions.
+`,
+};
 
-Evaluate whether this person should throw away this object based on their situation.
+export async function POST(req: Request) {
+  try {
+    const { story, tool } = await req.json();
 
-Consider: emotional attachment vs. practical utility, frequency of use in the past year, the space it occupies, and whether keeping it serves the present or just preserves the past.
-
-Return EXACTLY 4 lines, nothing else:
-Line 1: Exactly one of: "Keep it." / "Hold for 30 days." / "Throw it away."
-Line 2: The single strongest reason for your decision, referencing their specific situation.
-Line 3: One concrete risk or caution they should be aware of.
-Line 4: One specific, actionable next step they should take today.
-`;
+    if (!story || typeof story !== "string" || !story.trim()) {
+      return NextResponse.json(
+        { error: "Please describe your situation." },
+        { status: 400 }
+      );
     }
+
+    if (story.length > MAX_STORY_LENGTH) {
+      return NextResponse.json(
+        { error: `Input is too long. Please keep it under ${MAX_STORY_LENGTH} characters.` },
+        { status: 400 }
+      );
+    }
+
+    if (!VALID_TOOLS.includes(tool)) {
+      return NextResponse.json(
+        { error: "Invalid tool." },
+        { status: 400 }
+      );
+    }
+
+    const systemPrompt = systemPrompts[tool as ToolType];
 
     const response = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${process.env.GEMINI_API_KEY}`,

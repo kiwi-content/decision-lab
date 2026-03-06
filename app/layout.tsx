@@ -1,6 +1,20 @@
 import type { Metadata } from "next";
+import { Inter, Black_Ops_One } from "next/font/google";
 import "./globals.css";
 import { siteDescription, siteName, siteUrl } from "./site";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const blackOpsOne = Black_Ops_One({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-black-ops",
+  display: "swap",
+});
 
 const faviconPath = "/icon.png?v=20260228";
 const siteTitle = "Decision Lab | 60-Second Decision Tools";
@@ -60,7 +74,7 @@ export default function RootLayout({
   const currentYear = new Date().getFullYear();
 
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${blackOpsOne.variable}`}>
       <head>
         <script
           type="application/ld+json"

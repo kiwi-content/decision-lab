@@ -7,31 +7,51 @@ export default function TextMyEx() {
   const [situation, setSituation] = useState("");
   const [result, setResult] = useState("");
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [touched, setTouched] = useState(false);
 
   const handleSubmit = async () => {
-    if (!situation) return;
+    setTouched(true);
+    if (!situation.trim()) return;
 
     setLoading(true);
     setResult("");
+    setError("");
 
-    const res = await fetch("/api/decide", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        object: "Text My Ex",
-        story: situation,
-        tool: "text-my-ex",
-      }),
-    });
+    try {
+      const res = await fetch("/api/decide", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          object: "Text My Ex",
+          story: situation,
+          tool: "text-my-ex",
+        }),
+      });
 
-    const data = await res.json();
-    setResult(data.result);
-    setLoading(false);
+      if (!res.ok) {
+        throw new Error("Server error. Please try again.");
+      }
+
+      const data = await res.json();
+
+      if (data.error) {
+        throw new Error(data.error);
+      }
+
+      setResult(data.result);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleReset = () => {
     setSituation("");
     setResult("");
+    setError("");
+    setTouched(false);
   };
 
   const lines = result ? result.split("\n").filter((l) => l.trim() !== "") : [];
@@ -65,19 +85,33 @@ export default function TextMyEx() {
       <div className="card-pop mx-auto max-w-3xl bg-white p-6 sm:p-7">
         <textarea
           placeholder="When did you break up? Who ended it, and why? What are you hoping to get from reaching out?"
-          className="lab-input mb-4 h-28 resize-none"
+          className={`lab-input mb-4 h-28 resize-none ${touched && !situation.trim() ? "border-red-400" : ""}`}
           value={situation}
           onChange={(e) => setSituation(e.target.value)}
         />
+        {touched && !situation.trim() && (
+          <p className="mb-3 -mt-2 text-xs text-red-500">Please describe your situation before running.</p>
+        )}
 
         <button
           onClick={handleSubmit}
-          className="lab-btn"
+          disabled={loading}
+          className="lab-btn disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          Run Simulation
+          {loading ? (
+            <span className="inline-flex items-center gap-2">
+              <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+              </svg>
+              Analyzing...
+            </span>
+          ) : "Run Simulation"}
         </button>
 
-        {loading && <p className="mt-4 text-sm font-semibold text-[#4f4762]">Analyzing...</p>}
+        {error && (
+          <p className="mt-4 text-sm font-semibold text-red-600">{error}</p>
+        )}
 
         {result && !loading && (
           <div className="mt-6 rounded-2xl border border-black/10 bg-[#f7f4fc] p-5 text-left space-y-3">
@@ -139,7 +173,7 @@ export default function TextMyEx() {
           can be healthy; repeated messaging to reduce anxiety usually leads to regret.
         </p>
 
-        <p><strong className="text-[#1f1a2d]">What if my ex doesn’t respond?</strong></p>
+        <p><strong className="text-[#1f1a2d]">What if my ex doesn't respond?</strong></p>
         <p className="text-[#4a425d]">
           Treat non-response as a complete answer, not a puzzle to solve. Do not send
           follow-ups for 7 days. Use that space to refocus on routines, friends, and

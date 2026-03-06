@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { isRateLimited } from "../rate-limit";
 
 const VALID_TOOLS = ["text-my-ex", "quit-my-job", "break-up", "move", "throw-away"] as const;
 type ToolType = (typeof VALID_TOOLS)[number];
@@ -75,6 +76,14 @@ Line 4: One specific, actionable next step they should take today.
 
 export async function POST(req: Request) {
   try {
+    const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
+    if (isRateLimited(ip)) {
+      return NextResponse.json(
+        { error: "Too many requests. Please wait a minute and try again." },
+        { status: 429 }
+      );
+    }
+
     const { story, tool } = await req.json();
 
     if (!story || typeof story !== "string" || !story.trim()) {

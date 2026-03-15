@@ -2,7 +2,7 @@ export const siteName = "Decision Lab";
 export const siteDescription =
   "Use fast decision tools for relationships, relocation, career choices, and decluttering. Get a clear next step in about 60 seconds.";
 
-const canonicalSiteUrl = "https://decisionlab.today";
+const canonicalSiteUrl = "https://www.decisionlab.today";
 
 function normalizeSiteUrl(rawUrl?: string): string {
   if (!rawUrl) {

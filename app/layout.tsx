@@ -24,7 +24,7 @@ const websiteJsonLd = {
   "@type": "WebSite",
   "@id": `${siteUrl}#website`,
   name: siteName,
-  alternateName: "DecisionLab",
+  alternateName: ["DecisionLab", "decisionlab.today"],
   url: siteUrl,
   description: siteDescription,
   publisher: {

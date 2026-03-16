@@ -4,7 +4,7 @@ import Tool from "./Tool";
 export const metadata: Metadata = {
   title: "Should I Text My Ex? 60-Second Decision Tool | Decision Lab",
   description:
-    "Use a 60-second decision tool to decide whether texting your ex is a good idea right now. Get a clearer yes or no before you hit send.",
+    "It's 2 AM and you're about to type \"I miss you\" — don't. Take 60 seconds to check if it's real feelings or just loneliness. This free tool helps you decide before you regret it tomorrow.",
   alternates: {
     canonical: "/text-my-ex",
   },

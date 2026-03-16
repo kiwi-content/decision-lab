@@ -1,31 +1,34 @@
 import { NextRequest, NextResponse } from "next/server";
-import { canonicalHost } from "./app/site";
 
-const localHosts = new Set(["localhost", "127.0.0.1", "::1"]);
-const vercelHosts = new Set(["decisionlab.vercel.app"]);
+const CANONICAL_HOST = "www.decisionlab.today";
 
 export function proxy(request: NextRequest) {
-  const hostHeader = request.headers.get("host");
-  if (!hostHeader) {
+  const host = request.headers.get("host") ?? "";
+
+  if (host === CANONICAL_HOST) {
     return NextResponse.next();
   }
 
-  const host = hostHeader.split(":")[0].toLowerCase();
-
-  if (localHosts.has(host) || host === canonicalHost || !vercelHosts.has(host)) {
+  // Skip redirect for local development and Vercel system paths
+  if (
+    host.includes("localhost") ||
+    request.nextUrl.pathname.startsWith("/_next") ||
+    request.nextUrl.pathname.startsWith("/_vercel")
+  ) {
     return NextResponse.next();
   }
 
-  const redirectUrl = request.nextUrl.clone();
-  redirectUrl.host = canonicalHost;
+  // Redirect all non-canonical hosts (e.g. *.vercel.app) to canonical domain
+  const url = new URL(request.url);
+  url.hostname = CANONICAL_HOST;
+  url.port = "";
+  url.protocol = "https:";
 
-  if (redirectUrl.host === host) {
-    return NextResponse.next();
-  }
-
-  return NextResponse.redirect(redirectUrl, 308);
+  return NextResponse.redirect(url, 301);
 }
 
 export const config = {
-  matcher: ["/((?!_next/static|_next/image|favicon.ico|icon.png|manifest.webmanifest).*)"],
+  matcher: [
+    "/((?!_next/static|_next/image|favicon.ico|icon.png|manifest.webmanifest).*)",
+  ],
 };

@@ -40,7 +40,7 @@ export default function Home() {
       />
       <section className="panel-shell mx-auto max-w-6xl bg-[#fffff5] px-6 pt-6 pb-7 sm:px-10 sm:pt-8 sm:pb-10">
         <div className="hero-lockup mb-6 fade-in-up sm:mb-7">
-          <p className="mb-1 text-xs font-bold uppercase tracking-[0.25em] text-[#1d2440]/60">
+          <p className="mb-2 text-sm font-bold uppercase tracking-[0.25em] text-[#1d2440]">
             Decision Lab
           </p>
           <p className="hero-kicker mb-2 text-sm font-semibold uppercase tracking-widest text-[#5d92d8]">
